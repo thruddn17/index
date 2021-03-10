@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형연습2</title>
+</head>
+
+<style>
+  body {
+    margin: 0;
+  }
+  section {
+    border: 5px solid red;
+    height: 300px;
+  }
+  section:nth-child(4) {
+    background: url("./img/plan-main-01.jpg")no-repeat center center;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      height: auto;
+    }
+    section:nth-child(4) {
+      /* 이때 모바일 사이즈시에는 배경이미지 크기를 height: auto가 아닌
+      크기를 따로 지정해주어야함!!!!! ===> html의 태그에 내용이없으므로!*/
+      height: 300px;
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam dolorum totam vitae esse minima temporibus consequuntur! Nihil aspernatur, totam amet cum, explicabo soluta quam tempora expedita veniam voluptates non id rerum natus enim libero quaerat ea incidunt! Voluptates numquam ipsam, at qui alias optio blanditiis assumenda tenetur culpa molestias id ipsa ut ipsum quis, officiis eveniet neque sit similique. Assumenda velit reiciendis eligendi beatae totam natus atque minima vel deleniti, ab eveniet libero! Esse, quidem. Quam facere hic maiores impedit numquam cum. Praesentium, eaque consectetur eum accusamus magnam possimus dolor quibusdam eligendi. Inventore aut temporibus ea? Maiores, tempora consectetur.
+    </section>
+    <section>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nobis, quam repudiandae quidem deleniti placeat animi optio exercitationem accusantium mollitia doloribus id, beatae fugit laboriosam facilis commodi reprehenderit culpa vero eum magni. Nostrum tenetur placeat perspiciatis, harum, modi, facere qui commodi cumque iure necessitatibus consequuntur ducimus dolorem aliquam id dolor ullam maiores ipsam libero sed reiciendis? Sit consequatur laudantium aut architecto velit ducimus possimus neque eaque consequuntur atque dignissimos itaque consectetur voluptatem minima et vitae dicta, modi pariatur dolorem corporis fuga corrupti in! Tenetur nihil quod tempora eum nam ad amet esse, ab fugiat obcaecati dolore voluptatibus rem harum neque quae, similique labore nostrum autem repellendus, aspernatur sequi optio maiores repudiandae. Necessitatibus reprehenderit exercitationem nam, mollitia hic omnis minima voluptate.
+    </section>
+    <section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus alias repellat cum aperiam veniam ipsum hic facere, ipsa necessitatibus voluptatibus ea explicabo incidunt omnis consequuntur perferendis est. Tenetur quam minima, earum beatae, in fugit odio culpa maxime libero ad quidem? Velit molestiae modi laborum dolore nemo explicabo error reprehenderit vel odit autem accusantium atque id saepe veritatis, ad minus dignissimos ducimus suscipit eos inventore quibusdam facere perspiciatis quisquam excepturi. Perspiciatis sequi cumque ratione, neque velit asperiores ex molestias consequuntur eos consequatur facere inventore placeat autem, aperiam corrupti veritatis, aut unde. Similique harum architecto ducimus, beatae nam dolor facilis dolore totam tenetur? Labore dolor pariatur iure illum molestiae! Quam cupiditate consequatur impedit, totam qui ratione, quibusdam asperiores officia ipsa libero esse? Consequuntur accusamus nostrum praesentium, obcaecati corporis tenetur consectetur asperiores reprehenderit sed veniam laudantium deleniti voluptatibus blanditiis unde necessitatibus nobis aliquam voluptates nihil, officiis aut. Sit quae veritatis aliquam maxime?
+    </section>
+    <section>
+      
+    </section>
+  </div>
+</body>
+</html>

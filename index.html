@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My portfolio</title>
+
+    <!-- 파비콘 설정 부분 -->
+    <!-- <link rel="icon" href="./img/favicon.png"> -->
+    <!-- <link rel="icon" href="./img/favicon.ico"> -->
+    <link rel="icon" href="./img-favicon/airplane/air01.ico">
+
+    
+    <!-- CSS 설정 -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/velocity.css"> -->
+    
+
+    <!-- Slick css 설정 부분 -->
+    <link rel="stylesheet" href="./js/slick/slick-theme.css">
+    <link rel="stylesheet" href="./js/slick/slick.css">
+
+    <!-- Featherlight-CSS 설정 부분 -->
+    <link rel="stylesheet" href="./css/featherlight/featherlight.css">
+
+    <!-- 메인 CSS(순서 중요!!) -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+
+
+    <!-- JS 설정 -->
+    <script src="https://kit.fontawesome.com/763f15f91d.js" crossorigin="anonymous" defer></script>
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/modernizr.js"></script>
+    <!-- <script src="./js/velocity.min.js"></script>
+    <script src="./jS/velocity.ui.min.js"></script> 
+    <script src="./js/main.js"></script> -->
+    <script src="./js/jquery.scrollTo.min.js"></script>
+
+            <!-- Slick - 순서 중요함 !!! -->
+    <!-- Slick js 설정 부분 -->
+    <script src="./js/slick/slick.min.js"></script>
+    
+    <!-- Featherlight - JS 설정 부분 -->
+    <script src="./js/featherlight/featherlight.js"></script>
+
+    <!-- 메인 부분 js -->
+    <script src="./js/custom.js"></script>
+</head>
+
+<!--스크롤애니메이션 전체 설명 
+  hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
+
+<!-- 해제시 off / none으로 설정 ===>모든효과 pc버전에서만 적용 가능!!!-->
+<body data-hijacking="on" data-animation="opacity">
+
+  <!-- 전체 Container 선택 부분 -->
+  <div class="container">
+    <!-- Section (1) -->
+    <!-- 이부분의 visible 클래스가 붙으면 새로고침하면 이 클래스가
+    붙은 부분이 다시 처음에 나타나게 된다! -->
+    <section class="cd-section visible" id="home">
+    <!-- <section class="cd-section visible" id="home"> -->
+      <div>
+        <div class="content">
+          <div class="home-inner">
+            <!-- 이부분은 애니메이션으로 나타낼 것임 -->
+            <h3 class="welcome-text">Web Publisher <span>So gyeong woo <i class="far fa-star"></i></span></h3>
+
+            <div class="opacity-image"></div>
+            
+            <div class="home-heading">
+              <span>Sogyeongwoo</span>
+              <span>Publisher</span>
+              <span>Portfolio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (1) -->
+
+
+    <!-- Section (2) -->
+    <section class="cd-section" id="about">
+      <div>
+        <div class="content">
+          <div class="about-inner">
+            <div class="about-items">
+              
+              <div class="item">
+                <img src="./img/careers-main-01.png" alt="">
+                <span>
+                  <h3>About Me 01 - Nowdays</h3>
+                  <p>대학교 전공을 배우면서 여러분야에 대해 학습했지만 그중에서도
+                    웹 프론트 분야에 대한 관심이 매우 높아지게 되었고 특히 웹페이지 제작 부분에 제일 관심을 가지게 되었습니다. 현재는 반응형 웹사이트 제작 연습을 위해 디비컷, RWDB등의 사이트에서 기존 기업들의 페이지를 클론 코딩하면서 반응형 작업중
+                    모바일 사이즈 제작 과정에 집중적으로 학습중입니다.</p>
+                </span>
+              </div>
+
+              <div class="item">
+                <img src="./img/careers-main-02.png" alt="">
+                <span>
+                  <h3>About Me 02 - Nowdays & Object</h3>
+                  <p>또한 위의 분야들과 더불어 Javascript es6와 jquery, css + javascript 애니메이션 구현 등 웹페이지 제작을 위한 각종 부분에 대한 스킬들을 꾸준히 공부하고 있습니다. 이 모든 부분들을 스스로의 것으로 만들어 끝없이 학습하여 전문적인 웹 퍼블리셔로 성장하고 싶습니다.</p>
+                </span>
+              </div>
+
+              <div class="item">
+                <img src="./img/careers-main-03.png" alt="">
+                <span>
+                  <h3>About Me 03 - My Skills</h3>
+                  <p>
+                    <b>Skills</b> : HTML | CSS | Jquery | Javascript<br><br>  
+                    <b>Tools</b> : VS code | Edit Plus | SublimeText<br><br>
+                    <b>Etc</b> : Git(GitHub / Git bash) | SVN 
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (2) -->
+
+
+    <!-- Section (3) -->
+    <section class="cd-section" id="project">
+      <div>
+        <div class="content">
+          <div class="project-inner">
+    
+            <input type="radio" name="tabmenu" id="tab1" checked>
+            <input type="radio" name="tabmenu" id="tab2">
+            <input type="radio" name="tabmenu" id="tab3">
+        
+            <div class="tabs">
+              <div class="tab">
+                <!-- project-info 부분 설정 -->
+                <div class="project-info" data-text="01">
+                  <h3><a href="">Project : Play Station Store Page</a></h3>
+                  <p>
+                    첫번째 프로젝트는 PlayStation Store 웹 사이트 같은 느낌으로
+                    스스로 변형시켜 제작한 게임소개 페이지입니다. 좋아하거나 자주 했었던 게임들을 소개하는 내용들을 담았으며 PC,Mobile 버전으로 반응형으로 제작한 페이지입니다. 메인 페이지 전체를 스스로 제작하였고, 버튼 클릭시 서브 페이지가 뜨는 부분들은 원본 PS Store 페이지로 링크를 걸어놓았습니다.
+                  </p>
+
+                  <ul>
+                    <li><b>Responsive-Web</b> : PC / Mobile / Tablet</li>
+                    <li><b>Completed-Date</b> : 2021 .02 .16</li>
+                    <li><b>Architect</b> : So Gyeong Woo</li>
+                  </ul>
+
+                  <div class="detail">
+                    <div>
+                      <span>10Days</span>WORKING DAY
+                    </div>
+                    <div>
+                      <span>One</span>MEMBERS
+                    </div>
+                    <!-- <div>
+                      <span>Go</span>Linkd
+                    </div> -->
+                  </div>
+
+                  <a href="./project/project01/index.html" class="view-project" target="_blank">View Project <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <!--/// project-info 부분 설정 ///-->
+                
+                <!-- project - photo 부분 설정 -->
+                <div class="project-photo">
+                  <img src="./img03/psstore/up01.png" alt="">
+                  <img src="./img03/psstore/up07.png" alt="">
+                  <img src="./img03/psstore/best01.png" alt="">
+                  <img src="./img03/psstore/best02.png" alt="">
+                </div>
+                <!--/// project - photo 부분 설정 ///-->
+              </div>
+        
+              <div class="tab">
+                <!-- project-info 부분 설정 -->
+                <div class="project-info" data-text="02">
+                  <h3><a href="">Project : 제주도 여행소개 사이트</a></h3>
+                  <p>
+                    두번째 프로젝트는 제주도 여행을 위한 제주도에 대한 소개를 하는 간략한 웹 사이트 페이지입니다. 제주도에 대한 전체적인 동영상과 널리 알려져 있는 관광명소, 각 도시의 특산물등 전반적인 소개와
+                    이 프로젝트 또한 반응형 웹 페이지로 PC,Mobile,Tablet 버전으로 메인 페이지 부분만을 제작한 사이트 입니다. HTML과 CSS를 중심으로 제작하였으며 JavaScript는 플러그인만을 사용하였습니다.
+                  </p>
+
+                  <ul>
+                    <li><b>Responsive-Web</b> : PC / Mobile / Tablet</li>
+                    <li><b>Completed-Date</b> : 2021 .01 .19</li>
+                    <li><b>Architect</b> : So Gyeong Woo</li>
+                  </ul>
+
+                  <div class="detail">
+                    <div>
+                      <span>12days</span>WORKING DAY
+                    </div>
+                    <div>
+                      <span>One</span>MEMBERS
+                    </div>
+                    <!-- <div>
+                      <span>Go</span>Link
+                    </div> -->
+                  </div>
+
+                  <a href="./project/project02/index.html" class="view-project" target="_blank">View Project <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <!--/// project-info 부분 설정 ///-->
+                
+                <!-- project - photo 부분 설정 -->
+                <div class="project-photo">
+                  <img src="./img03/jejutrip/is06.png" alt="">
+                  <img src="./img03/jejutrip/is03.png" alt="">
+                  <img src="./img03/jejutrip/is05.png" alt="">
+                  <img src="./img03/jejutrip/is07.png" alt="">
+                </div>
+                <!--/// project - photo 부분 설정 ///-->
+              </div>
+
+              <div class="tab">
+                <!-- project-info 부분 설정 -->
+                <div class="project-info" data-text="03">
+                  <h3><a href="">Project : 스타트업 소개 사이트</a></h3>
+                  <p>
+                    세번째 프로젝트로는 스타트업에 관련된 내용을 담은 기업형 사이트입니다.
+                    이 프로젝트는 PC,Mobile 버전으로 제작한 반응형 웹사이트 이며, CSS | Jquery 애니메이션을 
+                    활용하고 여러 플러그인들을 활용하여 구현하였습니다. 이미지 파일들은 스스로 제작하지 않고 무료 이미지 사이트에 있는 이미지들을 활용하였고 동영상 강의와 정보들을 활용하여 제작하였습니다.
+                    
+                  </p>
+
+                  <ul>
+                    <li><b>Responsive-Web</b> : PC / Mobile / Tablet</li>
+                    <li><b>Completed-Date</b> : 2021 .02 .20</li>
+                    <li><b>Architect</b> : So Gyeong Woo</li>
+                  </ul>
+
+                  <div class="detail">
+                    <div>
+                      <span>14days</span>WORKING DAY
+                    </div>
+                    <div>
+                      <span>One</span>MEMBERS
+                    </div>
+                    <!-- <div>
+                      <span>Go</span>Link
+                    </div> -->
+                  </div>
+
+                  <a href="./project/project03/index.html" class="view-project" target="_blank">View Project <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <!--/// project-info 부분 설정 ///-->
+                
+                <!-- project - photo 부분 설정 -->
+                <div class="project-photo">
+                  <img src="./img03/start/start01.png" alt="">
+                  <img src="./img03/start/start02.png" alt="">
+                  <img src="./img03/start/start03.png" alt="">
+                  <img src="./img03/start/start04.png" alt="">
+                </div>
+                <!--/// project - photo 부분 설정 ///-->
+              </div>
+            </div>
+        
+            <div class="btn">
+              <label for="tab1"></label>
+              <label for="tab2"></label>
+              <label for="tab3"></label>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (3) -->
+
+
+    <!-- Section (4) -->
+    <section class="cd-section" id="plan">
+      <div>
+        <div class="content">
+          <div class="plan-inner">
+            <div class="plan-feature">
+              
+              <div class="plan-info">
+                <div class="plan-heading">
+                  <h2>Planning <br> For the Next Project</h2>
+                  <hr class="bar">
+                  <p>다음 프로젝트는 스타트업 기업들을 소개하거나 스타트업 기업들에 관련된 웹 사이트를 제작하기 위해 현재 작업중입니다. 이 페이지에는 
+                  CSS 애니메이션과 slick-js등 여러가지 효과를 넣을 예정이며 반응형 제작을 위해 PC버전 / 모바일 버전으로 제작 예정입니다.
+                  </p>
+                </div>
+
+                <div class="plan-photo">
+                  <!-- <img src="./img/plan-main-01.jpg" alt=""> -->
+                  <img src="./img/plan-main-00.jpg" alt="">
+                </div>
+              </div>
+              
+              <div class="history-info">
+                <h2>Project History</h2>
+                <hr class="bar">
+
+                <div class="history-slider">
+                  <div>
+                    <h4>프로젝트 01<br>유튜브 페이지
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile | Tablet</li>
+                        <li><b>Completed</b> : 2020 .11 .11</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="./history-project/project01/Youtube-Project/youtube.html" class="page" target="_blank">|Click|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 02<br>음악 스트리밍 
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC(적응형)</li>
+                        <li><b>Completed</b> : 2020 .05 .29</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="./history-project/project02/musicsite/streaming.html" class="page" target="_blank">|Click|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 03<br>깃허브 Origin
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile | Tablet</li>
+                        <li><b>Completed</b> : 2020 .09 .14</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="./history-project/project03/github-original/index.html" class="page" target="_blank">|Click|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 04<br>강아지 리스트
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile</li>
+                        <li><b>Completed</b> : 2020 .05 .28</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="./history-project/project04/puppy/puppylist.html" class="page" target="_blank">|Click|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 05<br>구글크롬 Origin
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile</li>
+                        <li><b>Completed</b> : 2020 .10 .06</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="./history-project/project05/ChromeOrigin/index.html" class="page" target="_blank">|Not Yet|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 06<br>이노테크 CO
+                    <span>2020</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile | Tablet</li>
+                        <li><b>Completed</b> : 2021 .01 .29</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="" class="page" target="_blank">|Not Yet|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 07<br>반응형 페이지
+                    <span>2021</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC | Mobile | Tablet</li>
+                        <li><b>Completed</b> : 2021 .03 .08</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="" class="page" target="_blank">|Not Yet|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>프로젝트 08<br>반응형 페이지
+                    <span>2021</span></h4>
+                    <p>
+                      <ul>
+                        <li><b>Mode</b> : PC(적응형)</li>
+                        <li><b>Completed</b> : 2021 .03 .08</li><br>
+                        <li><b style="color: aquamarine;">Page View</b> : <a href="" class="page" target="_blank">|Not Yet|</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (4) -->
+
+
+    <!-- Section (5) -->
+    <section class="cd-section" id="awards">
+      <div>
+        <div class="content">
+          <div class="awards-inner">
+            
+            <!-- 왼쪽 영역 부분 -->
+            <div class="awards-left">
+              <div class="about-heading">
+                <h2>2021 <br>My Future  <br>IT Plan</h2>
+                <hr class="bar">
+                <p class="plan">
+                  2021년의 목표로 현재 반응형 웹사이트 제작을 수없이 연습하여 능숙해질 때 까지
+                  기존의 기업 사이트를 리뉴얼 및 클론코딩하는 계획을 실행중입니다. <br> <br>
+                  또한 Javascript 부분을 중점적으로 좀 더 인터렉티브한 웹 사이트 제작을 위해 css와 함께 애니메이션 구현 능력을 키우는 중입니다. <br> <br>
+                  스스로 처음부터 끝까지 막힘없이 자유자재로 구현 가능할 때 까지 웹사이트 제작 연습을 꾸준히 할 생각으로 매일매일 멈추지 않고 학습중입니다.
+                </p>
+                <a href="#none" class="view-awards" target="_blank">VIEW THE AWARDS</a>
+              </div>
+            </div>
+            <!--// 왼쪽 영역 부분 //-->
+            
+
+
+            <!-- 오른쪽 영역 부분 -->
+            <div class="awards-right">
+              <img src="./img/victory-jump.png" alt="">
+            </div>
+            <!--// 오른쪽 영역 부분 //-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (5) -->
+
+
+    <!-- Section (6) -->
+    <section class="cd-section" id="location">
+      <div>
+        <div class="content">
+          <div class="location-inner">
+            <div class="feature">
+              
+              <div class="office">
+                <div class="headquaters">
+                  <b>구체적인 Skill 설명[1]</b>
+                  <h2>HTML</h2>
+                  <p>시맨틱 태그를 사용한 html 작성</p>
+
+                  <span>Keep going : 반응형 웹사이트 제작을 위한 기존 사이트들의 레이아웃 제작연습</span>
+                </div>
+
+                <div class="customer">
+                  <b>구체적인 Skill 설명[2]</b>
+                  <h2>CSS</h2>
+                  <p>다양한 스타일,애니메이션을 활용한 구현</p>
+                  <p>@keyframes를 이용한 애니메이션 작성</p>
+                  <p>BEM 방식을 활용한 소스작성 가능</p>
+                  <span>Keep going : 미디어 쿼리를 활용한 반응형 사이즈 제작 연습</span>
+                </div>
+
+              </div>
+
+              <div class="service">
+                <div class="service-item">
+                  <i class="fab fa-envira"></i>
+                  <h3>JavaScript Skills</h3>
+                  <p>
+                    기본문법을 활용한 간단한 동적 이벤트 구현
+                  </p>
+                </div>
+              </div>
+
+              <div class="service">
+                <div class="service-item">
+                  <i class="fas fa-kaaba"></i>
+                  <h3>Jquery Skills</h3>
+                  <p>
+                    플러그인 활용 및 여러가지의 동적 이벤트 구현
+                  </p>
+                </div>
+              </div>
+
+              <div class="service">
+                <div class="service-item">
+                  <i class="fab fa-pagelines"></i>
+                  <h3>사용해봤던 & 사용가능한 Tools</h3>
+                  <p>
+                    VS Code / Edit Plus / SublimeText / Brakets
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (6) -->
+
+    <!-- Section (7) -->
+    <section class="cd-section" id="contact">
+      <div>
+        <div class="content">
+          <div class="contact-inner">
+            <div class="contact-feature">
+              
+              <div class="contact-form">
+                <h3><b>Contact</b> Me</h3>
+                <p>Fell free to ask for details, dont'save any questions.</p>
+                <form action="" class="send-box">
+                  <label for="">Email <span>*</span></label>
+                  <input type="email" maxlength="20">
+
+                  <label for="">Subject <span>*</span></label>
+                  <input type="email" maxlength="20">
+
+                  <label for="">Message <span>*</span></label>
+                
+                  <textarea cols="30" rows="10"></textarea>
+
+                  <!-- <input type="button" value="send message"> -->
+                  <button>send message</button>
+
+                </form>
+              </div>
+              
+              <div class="contact-info">
+                <h4>My <b>Address</b></h4>  
+                <ul>
+                  <li>Address : 801, Gwangmyeong, Cheolsan</li>
+                  <li>Phone : 010 8506 9714</li>
+                  <li>Email : <a href="https://mail.google.com/mail/u/0/?pli=1#" target="_blank">thruddn890@gmail.com</a></li>
+                </ul>
+
+
+                <h4>Convenient <b>Time</b></h4>
+                <ul>
+                  <li><i class="fa fa-clock-o"></i> Monday - Friday : 9am to 11pm</li>
+                  <li><i class="fa fa-clock-o"></i> Saturday : 9am to 11pm</li>
+                  <li><i class="fa fa-clock-o"></i> Sunday : 10am to 10pm</li>
+                </ul>
+
+                <h4>Last <b>Comment</b></h4>
+                <p>
+                  끈기와 멈추지 않는 노력으로 배울수 있는 모든 것들을 섭렵하여 독창적인
+                  결과물을 구현할 수 있는 Web Publisher로 성장하도록 쉬지 않고 달려가도록 하겠습니다. 
+                </p>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Section (7) -->
+
+
+    <!-- Header 설정 부분 -->
+    <header>
+      <div class="gnb_inner">
+        <!-- 로고 이미지 부분 -->
+        <div class="logo">
+          <a href="#none"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <!--// 로고 이미지 부분 -->
+
+        <!-- gnb - a태그 7개 설정 -->
+        <div class="gnb">
+          <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#plan">Plan & History</a>
+            <a href="#awards">Awards</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <!-- 슬로건 오른쪽 상단 부분 텍스트 -->
+          <div class="slogan">
+            Web Publisher SoGyeongWoo.
+          </div>
+          <!--// 슬로건 오른쪽 상단 부분 텍스트 끝!!-->
+        </div>
+        <!--// gnb - a태그 7개 설정 끝!-->
+
+        <!-- 트리거 - 햄버거 버튼 부분 설정!!! -->
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>  
+        </div>
+        <!--// 트리거 - 햄버거 버튼 부분 설정!!! -->
+
+      </div>
+    </header>
+    <!--// Header 설정 부분 끝!!-->
+
+  </div>
+  <!--// 전체 Container 선택 부분 끝!!-->
+
+  
+  <!-- toTop 버튼 부분 설정 -->
+  <a href="#" class="gototop">
+    <img src="./img/gototop.png" alt="">
+  </a>
+
+  <!-- hiring 이미지 설정 부분 -->
+  <a href="hiring.html"  class="btn_hiring" data-featherlight="iframe"><i class="fa fa-commenting"></i>Hiring</a>
+
+
+	<nav>
+		<ul class="cd-vertical-nav">
+			<li><a href="#0" class="cd-prev inactive">Next</a></li>
+			<li><a href="#0" class="cd-next">Prev</a></li>
+		</ul>
+  </nav> 
+  
+
+</body>
+</html>

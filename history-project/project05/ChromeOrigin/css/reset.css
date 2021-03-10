@@ -1,0 +1,16 @@
+/* 폰트사이즈는 - px 로 사용하고
+ line-height는 em 단위를 사용하기!! */
+
+
+ body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px; 
+  /* 기본값은 16px = 1em = 100% */
+  
+  color: #222;
+  /* 줄간격 */
+  line-height: 1.6em;
+
+  margin: 0;
+  padding: 0;
+}

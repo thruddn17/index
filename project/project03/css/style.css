@@ -1,0 +1,1494 @@
+@charset "utf-8";
+
+/* 설정 01번 */
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+/* 설정 02번 */
+/* XEION CDN */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+/* 설정 03번 */
+/* Web Fonts - Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+/* font-family: 'Source Sans Pro', sans-serif; */
+
+
+/* 설정 04번 */
+/* Web Fonts - NoonNoo */
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 메뉴 nav 버튼 클릭시 스크롤 부드럽게 --- > css로 설정해보기 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+/* 모달창 클릭시 나타날 때 스크롤 되는 부분 방지
+====> js 부분에 연결하기! */
+body.active {
+  overflow: hidden;
+}
+
+
+
+
+/* Section 부분 전체 설정 
+-모든 부분 적용이 아니고 일부부분만 따로 설정해줘야함*/
+section {
+  /* padding: 100px 0px; */
+  padding: 130px 0px;
+}
+
+
+
+/* Header ---> 스크롤 애니메이션 연관 부분이므로 - 테스트해볼 때는 class에 active 설정해주어서
+해보기!! */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  transition: 0.5s;
+  /* background-color: red; */
+}
+/* active 클래스 붙여 설정을 해주고 js에서 마지막으로 설정해주는것임! */
+header.active {
+  /* 스크롤시 헤더부분 설정 - box-shadow 꼭!! */
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.header-inner {
+  /* border: 1px solid #000; */
+  width: 1300px;
+  margin: auto;
+  overflow: hidden;
+
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  margin-top: -7px;
+}
+.gnb {
+  float: right;
+}
+.gnb a {
+  margin: 10px;
+  font-size: 16px;
+}
+
+
+/* All Section Display */
+/* header {display: none;} */
+/* .welcome {display: none;} */
+/* .ceo-access {display: none;} */
+/* .banner {display: none;} */
+/* .feature {display: none;} */
+/* .vision {display: none;} */
+/* .faq {display: none;} */
+/* .review {display: none;} */
+/* .focus {display: none;} */
+/* .guide {display: none;} */
+/* .news {display: none;} */
+/* footer {display: none;} */
+
+/* Common - bar 부분 */
+.headline-share {
+  text-align: center;
+}
+.headline-share h1 {
+  font-size: 44px;
+  position: relative;
+  /* border: 1px solid #000; */
+
+  /* bar 부분 위치 수정 */
+  padding-bottom: 20px;
+}
+
+/* bar 부분 모양 설정! */
+.headline-share h1::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  /* background-color: red; */
+  background: linear-gradient(to right, #1f8de6, #5ed6fe);
+
+  /* 위치조정 -- 정중아에 위치 */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headline-share p {
+  font-size: 20px;
+}
+
+
+
+
+
+
+/*########## Section : welcome ############*/
+.welcome {
+  /* border: 5px solid #000; */
+  height: 90vh;
+  /* height: 100vh; */
+  position: relative;
+
+  /* 이부분은 padding값이 없어야함!! */
+  padding: 0;
+}
+.slideshow {
+
+}
+.welcome-heading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 200px;
+  text-align: center;
+
+  width: 750px;
+}
+.welcome-heading span {
+  font-size: 24px;
+}
+.welcome-heading h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-bottom: 30px;
+  margin-top: 15px;
+} 
+
+/* 글씨 입력되는부분 */
+.welcome-heading h1 em {
+  /* 줄이 바뀌어야 하므로! */
+  display: block;
+  font-style: normal;
+  color: #eb4d4b;
+}
+.welcome-heading p {
+  padding: 0px 100px;
+  margin-bottom: 50px;
+}
+.welcome-btns {
+
+}
+.welcome-btns .btn {
+  /* border: 1px solid #000; */
+  width: 160px;
+  /* 버튼 태그는 그냥 padding값으로 주고 설정해주기!!
+  ->높이값 따로 지정하지말고 */
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px;
+
+  /* 크기를 제대로 주기 위해 */
+  display: inline-block;
+  color: #fff;
+}
+.btn.start {
+  background-color: #0abde3;
+}
+.btn.guide {
+  background-color: #fff;
+  color: #222;
+}
+
+
+.btn {
+  transition: 0.5s;
+}
+/* 마우스 오버 이벤트 */
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+
+  /* 위치 이동을 위해작성 */
+  transform: translateY(-5px);
+}
+
+/* Mouse wheel 부분 설정 */
+.mouse {
+  position: absolute;
+  border: 2px solid #ccc;
+  width: 32px;
+  height: 45px;
+  border-radius: 30px;
+
+  /* Section을 기준으로 100px */
+  bottom: 100px;
+  left: 250px;
+}
+.wheel {
+  /* span태그이므로 */
+  display: block;
+  /* position값 딱히 줄 필요 없음 */
+  position: absolute;
+  width: 4px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 5x;
+  left: 12px;
+  top: 10px;
+
+  animation: wheel 1s linear infinite;
+}
+/* Mouse 부분 애니메이션 설정 */
+@keyframes wheel {
+  0% {
+    /* 처음에은 원래 위치 0%와 100%부분의 위치는 같아야 함! */
+    top: 8px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 8px;
+  }
+
+}
+
+
+
+
+/*########## Section : Ceo ############
+전체적으로 ceo-inner와 .access-inner
+이부분으로 2가지로 나뉨
+*/
+.ceo-access {
+  /* padding주지않기 -- 이부분은 조금 띄워주기!*/
+  padding-bottom: 0;
+}
+.ceo-inner,
+.access-inner {
+  /* border: 1px solid #000; */
+  margin: auto;
+  width: 1300px;
+}
+.ceo-content {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  padding: 50px 0px;
+}
+.ceo-content > div {
+  float: left;
+  width: 50%;
+}
+.ceo-left {
+  padding-right: 50px;
+}
+.ceo-left img {
+  width: 30px;
+
+  /* 이때는 이미지 부분인데 색깔을 바뀌기 위해서 filter속성을 이용!!! */
+  filter: invert(60%) sepia(27%) saturate(1152%) hue-rotate(118deg) brightness(96%) contrast(89%);
+}
+.ceo-left h3 {
+  font-weight: bold;
+
+}
+
+
+.ceo-right {
+  text-align: center;
+}
+.ceo-right > div {
+  float: left;
+  padding: 20px;
+}
+.ceo-msg {
+  width: 60%;
+}
+.ceo-msg h3 {
+  font-size: 28px;
+  color: #009b72;
+}
+.ceo-msg h3 big {
+  display: block;
+}
+
+.ceo-photo {
+  width: 40%;
+}
+.ceo-photo img {
+  border-radius: 15px;
+
+  /* 이부분을 설정해주어야 - 이미지가 안잘림! */
+  width: 100%;
+}
+
+
+
+/* border-bottom사이와 간격 띄우기! */
+.access-content {
+  /* padding: 50px 0px; */
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+
+.access-content > div {
+  float: left;
+  width: 50%;
+}
+
+/* 언제나 어디서나 ~~ 텍스트 부분 */
+.access-left {
+  padding-right: 50px;
+  padding-top: 80px;
+}
+
+/* access-right --- 핸드폰2개 큰 이미지 설정 부분 */
+.access-right {
+  text-align: center;
+  overflow: hidden;
+}
+/* 핸드폰 2개 이미지 밑에 부분에 공간 조금 띄워져 있는 부분 해결 */
+.access-right img {
+  display: block; /*block요소로 변경하면 margin이 사라짐!!!*/
+  /* 그리고 이렇게하면 다시 왼쪽으로 붙게되어  밑에 내용 추가!!!*/
+  float: right;
+}
+
+
+/* store 이미지 버튼 부분 */
+.btn-download {
+  margin-top: 30px;
+}
+
+
+
+/*########## Section : Banner 설정 부분 ############ */
+.banner {
+  /* 이부분 배경색 설정하는거 순서 중요함!!! */
+
+  /* 배경색으로 linear-gradient로 설정 - 즉 gradient를 넣을 때에는*/
+  /* background: linear-gradient(to right, #69acfe, #6eaefd); */
+  background: url("../img/wave-line.png")no-repeat center right 100px,
+  linear-gradient(to right, #69acfe, #6eaefd);
+  background-size: 80px;
+
+  /* 이부분도 padding값 주지않기 - 너무넓음 */
+  padding: 0;
+
+  /* 배경이미지를 단색으로 넣을때 설정 */
+  /* background: #69acfe url("../img/wave-line.png")no-repeat center right 100px;
+  background-size: 80px; */
+}
+.banner-inner {
+  width: 1300px;
+  margin: auto;
+}
+.banner-content {
+  overflow: hidden;
+
+  padding: 40px 0px;
+}
+.banner-content > div {
+  /* border: 1px solid #000; */
+  float: left;
+  width: 50%;
+}
+
+/* input 부분 일단 none으로 설정 */
+input[name=tabmenu] {
+  display: none;
+}
+
+.tab-btn {
+
+}
+
+/* label은 inline 요소 */
+.tab-btn label {
+  cursor: pointer;
+  /* border: 1px solid #000; */
+  display: inline-block;
+  /* width: 32%; */
+  width: 30%;
+  color: #fff;
+  margin: 5px;
+
+  /* 전체요소 가운데 정렬 */
+  text-align: center;
+}
+
+/* 배경색 설정 em 태그도 inline 요소임!*/
+.tab-btn label em {
+  background-color: #fff;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* 탭메뉴 설정 */
+.tab-btn label em img {
+  width: 60px;
+
+  /* filter 설정 */
+  filter: invert(44%) sepia(18%) saturate(2217%) hue-rotate(161deg) brightness(94%) contrast(82%);
+}
+.tab-btn label span {
+  /* 이부분에 block으로 설정해주어야 글씨와 이미지 배치가 맞음 */
+  display: block;
+
+  margin-top: 10px;
+}
+
+.tabs {
+
+}
+.tab {
+  /* 임시로설정 */
+  display: none;
+  color: #fff;
+  
+  padding-top: 20px;
+  padding-left: 50px;
+}
+.tab h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.tab p {
+
+}
+
+
+
+/* Checked Function 설정 */
+
+/* 이부분 - label을 누르게 되면 input을 안보이게 설정해도
+체크되는 효과가 적용된다.  ~은 형제요소임
+=> input이랑 형제 개념으로 되어있는 부분은 tabs이고
+tabs밑의 tab1(2,3)을 보이게하라고 설정*/
+input[id=tab1]:checked ~ .tabs .tab1,
+input[id=tab2]:checked ~ .tabs .tab2,
+input[id=tab3]:checked ~ .tabs .tab3 {
+  display: block;
+}
+
+
+/*input이랑 같이 있는 계층 요소는
+tab-btn 클래스임!
+tab-btn밑에는 label이 있음 ===> 이부분 중요!!!
+01 em 부분 설정*/
+input[id=tab1]:checked ~ .tab-btn label[for=tab1] em,
+input[id=tab2]:checked ~ .tab-btn label[for=tab2] em,
+input[id=tab3]:checked ~ .tab-btn label[for=tab3] em {
+  background-color: #34495e;
+  transition: 0.5s;
+}
+
+/* 02 em안에 있는 img 부분 설정 */
+input[id=tab1]:checked ~ .tab-btn label[for=tab1] em img,
+input[id=tab2]:checked ~ .tab-btn label[for=tab2] em img,
+input[id=tab3]:checked ~ .tab-btn label[for=tab3] em img {
+  /* 완전히 반전시킬 때는 invert 속성 사용
+  이렇게 설정하면 클릭되었을 때 안에있는 이미지 배경색이 바뀜 */
+  filter: invert();
+  transition: 0.5s;
+}
+
+
+/* 03 label 밑에 있는 span 부분 설정 */
+input[id=tab1]:checked ~ .tab-btn label[for=tab1] span,
+input[id=tab2]:checked ~ .tab-btn label[for=tab2] span,
+input[id=tab3]:checked ~ .tab-btn label[for=tab3] span {
+  color: #34495e;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+/*########## Section : Feature 설정 부분 ############ */
+.feature {
+
+}
+.feature-inner {
+  width: 1300px;
+  margin: auto;
+}
+.feature-content {
+  overflow: hidden;
+  margin: 150px 0px;
+}
+.feature-content > div {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.feature-mockup {
+
+}
+
+/* number + text 부분 */
+.feature-about {
+  padding: 0px 70px;
+  padding-top: 80px;
+}
+.feature-about h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+
+
+/*########## Section : Vision 부분 설정 ############*/
+.vision {
+  /* 이부분도 padding값 따로 설정
+  ==> 중요! */
+  padding-bottom: 0;
+  padding-top: 150px;
+}
+.vision-inner {}
+.vision-content {
+  overflow: hidden;
+}
+.vision-content > div {
+  /* border: 1px solid red; */
+  float: left;
+  width: 33.3333333%;
+  height: 400px;
+}
+.vision-item-desc {
+  background-color: #f9f9f9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vision-item-desc h3 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+.vision-item-headline {
+  /* border: 1px solid #000; */
+  /* 너비값을 이정도로 설정해야 중앙에 위치하게 된다 */
+  width: 60%;
+}
+
+/* hr은 block 요소임 */
+.vision-item-desc hr {
+  width: 45px;
+  height: 3px;
+  border: none;
+  background-color: #9b59b6;
+  
+  /* 중요 부분!!! */
+  display: inline-block;
+}
+.vision-item-desc p {
+  margin-top: 0;
+}
+
+
+.vision-item-photo {
+  /* border: 5px solid red; */
+  
+
+}
+.vision-item-photo img {
+  width: 100%;
+
+  /* 부모요소의 높이값 받아줘야 함! */
+  height: inherit;
+
+  /* background-cover와 같은 기능임!!!
+  사용하려면 width / height 값 필요!! */
+  object-fit: cover;
+}
+
+
+
+
+
+
+/*########## Section : faq 부분 설정 ############*/
+.faq {
+
+}
+.faq-inner {
+  width: 1300px;
+  margin: auto;
+}
+.faq-content {
+  overflow: hidden;
+}
+.faq-content > div {
+  /* border: 1px solid #000; */
+  float: left;
+  width: 50%;
+
+  padding: 25px;
+
+  /* .awards-content가 위아래로 움직이는 현상 방지 
+  min-height를 설정해주지 않으면 텍스트 열리는 슬라이드 탭을 클릭시
+  오른쪽 부분의 이미지가 덜컹거리며움직이게 된다!*/
+  min-height: 700px;
+}
+.faq-accordion {
+
+}
+.faq-item {
+  /* border: 1px solid #7dbeff; */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.faq-item > div {
+  padding: 15px;
+
+  
+}
+
+/* active 설정 부분!!! -- 눌렸을 때 색상 
+active라는 클래스가 들어갈때는 밑의 색상으로 설정*/
+.faq-item.active {  
+  border: 1px solid #7dbeff;
+}
+/* active클래스가 들어가있을때 title 부분의 가상컨텐츠 부분 설정 */
+.faq-item.active .faq-title::after {
+  color: #7dbeff;
+  transform: rotate(90deg);
+}
+
+.faq-title {
+  color: #448ad1;
+  cursor: pointer;
+}
+/* 네모네모 모양을 화살표로 - 가상컨텐츠 작성==> 유니코드로 넣기! */
+.faq-title::after {
+  content: '\f105';
+  font-family: fontawesome;
+
+  color: #444;
+  /* 위치조정 편하게! */
+  float: right;
+  transition: 0.35s;
+}
+
+.faq-desc {
+  /* 이부분이 맨처음에는 다보이지 않아야 하므로 */
+  display: none;
+}
+
+
+
+
+
+/* 오른쪽 awards 부분설정 */
+.awards-content {
+  text-align: center;
+}
+.awards-content h2 {
+  font-size: 36px;
+  color: #e7a300;
+}
+.award-image {
+  position: relative;
+  /* border: 1px solid #000; */
+  margin-bottom: 50px;
+}
+
+/* 이미지 위에 가상컨텐츠 설정 부분 */
+.award-image::after {
+  content: 'december 9, 2020';
+  position: absolute;
+  background-color: #000;
+  width: 185px;
+  height: 50px;
+  color: #ddd;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+
+  /* 위치 조정 */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.award-image img {
+  /* 가득채우고 싶을때 */
+  width: 100%;
+  /* display: block; */
+}
+
+.awards-content p {
+  margin-bottom: 40px;
+}
+.btn-awards {
+  border: 1px solid #000;
+  padding: 13px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.35s;
+}
+.btn-awards:hover {
+  color: #fff;
+  background-color: crimson;
+  /* border: none; 
+  이렇게 설정해버리면 위에 awards에 border설정한값이랑 크기가 안맞아서
+  조금 어긋나게 된다 그러므로 밑에내용 설정*/
+  border-color: transparent;
+}
+
+
+
+
+
+
+
+/*########## Section : Review 부분 설정 ############*/
+.review {
+  background-color: #f9f9f9;
+}
+.review-inner {
+  width: 1300px;
+  margin: auto;
+}
+.review-content {
+  text-align: center;
+
+  /* 한번 더 너비값 지정해서 작게만들기 위해서 지정 */
+  width: 900px;
+  /* width값 지정후 다시 가운데로 정렬 */
+  margin: auto;
+}
+h1.slogan {
+  font-size: 36px;
+}
+.review-slider {
+
+}
+.review-slider div {
+
+}
+.review-slider div p {
+  padding: 0px 70px;
+}
+.review-slider p span {
+  /* 줄바꿈 설정 */
+  display: block;
+  font-weight: bold;
+}
+
+
+
+
+/*########## Section : Focus 부분 설정!!! ############*/
+.focus {
+
+}
+.focus-inner {
+  width: 1300px;
+  margin: auto;
+}
+.focus-content {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding: 50px 0px;
+}
+
+/* 이부분 설정 중요함! */
+.focus-item {
+  /* float사용하지 않고 설정해보기! */
+  display: inline-block;
+  width: 30%;
+  padding: 0px 50px;
+}
+.focus-item img {
+  width: 75px;
+  filter: invert(82%) sepia(5%) saturate(3160%) hue-rotate(341deg) brightness(98%) contrast(92%);
+}
+.focus-item h3 {
+  font-weight: bold;
+  /* 가까이 붙이기 */
+  margin-bottom: 0;
+}
+
+/* xeicon 부분 설정 */
+.focus-item i {
+  font-size: 5px;
+  transform: rotate(45deg);
+  /* transform: scale(0.5); 크기는 이거 사용해도 가능(font-size 대신에!!) */
+}
+
+.focus-item p {
+  /* 가까이 붙이기 */
+  margin-top: 0;
+}
+
+
+
+
+
+/*########## Section : Guide 부분 설정!!! ############*/
+.guide {
+  /* 이부분은 padding-top값만 없애주기!! */
+  padding-top: 0;
+}
+.guide-inner {
+  width: 1300px;
+  margin: auto;
+}
+.guide-content {
+  /* border: 1px solid #000; */
+  overflow: hidden;
+}
+.guide-content > div {
+  float: left;
+}
+
+
+/* 왼쪽부분 */
+.guide-slider {
+  width: 40%;
+  text-align: center;
+}
+/* 오른쪽부분 */
+.guide-video {
+  width: 60%;
+}
+
+
+.slider-mockup {
+  /* border: 5px solid red; */
+  /* 이부분 중앙배치 설정 == 밑에내용 설정하고 slider에 textalign*/
+  display: inline-block;
+
+  position: relative;
+}
+.round-mockup {}
+
+/* 핸드폰이미지 안에 넣을 영역 부분 설정!!!!
+===> slider-mockup과 연관!
+===> 이부분에 slick-slider 넣어주기! */
+.mockup-slider {
+  /* border: 2px solid red; */
+  position: absolute;
+  width: 85%;
+  height: 550px;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 이부분 적용시키려면 overflow:hidden 필요!! */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* guid-video 부분 설정 */
+.guide-video h1{
+  font-size: 38px;
+  text-transform: uppercase;
+}
+.guide-video h1 span {
+  color: #eb4d4b;
+}
+.video-headline {
+  font-size: 34px;
+}
+
+/* 유튜브 동영상 로고 이미지 부분 */
+.video-headline img {
+  /* 수직 중앙정렬 - 이것만하면 완벽히 적용이 되지않음 */
+  vertical-align: middle;
+  /* 따로 이렇게 값 설정 필요 */
+  margin-top: -5px;
+}
+.video-frame {
+  width: 530px;
+  height: 370px;
+
+  position: relative;
+}
+.video-frame img {
+  width: inherit;
+  height: inherit;
+  border-radius: 5px;
+
+  /* 이미지 맞게 설정 */
+  object-fit: cover;
+}
+.video-frame .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  color: #fff;
+  font-size: 80px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+
+
+/*########## Section : News 설정 부분!!!! ############*/
+.news {
+  background-color: #f9f9f9;
+}
+.news-inner {
+  width: 1300px;
+  margin: auto;
+}
+.news-content {
+  overflow: hidden;
+
+  /* 전체조절하고 싶을때 설정 */
+  /* width: 95%; */
+}
+.news-content > div {
+  /* border: 1px solid #000; */
+  float: left;
+  width: 50%;
+}
+
+/* news - Left 부분 설정!!! */
+.news-left {
+}
+
+.news-big {
+  width: 550px;
+  height: 550px;
+
+  position: relative;
+
+  /* 가운데로 위치하게 */
+  margin: auto;
+  cursor: pointer;
+}
+
+/* overlay 효과를 주기 위해 설정 --- 기본적으로 가독성 좋게 하기위해
+글씨 읽을수 있게 빈 배경 설정해주기!!!*/
+.news-big::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+/*+ hover 설정 */
+.news-big:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+
+.news-big img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+/* 텍스트 부분 설정!!!! */
+.news-headline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+
+  /* 모든 요소는 position:absolute나 fixed가 들어가면 inline요소로 변하게 된다!!! ===> 그러므로 width: 100%를 잃게되므로 다시 설정해주어야함!!*/
+  width: 80%;
+}
+.news-headline h2 {
+  font-size: 32px;
+  
+}
+.news-headline p {
+
+}
+.date {
+  /* 줄바꿈 */
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+
+  /* 이부분에 float:right를 적용하게 되면 news-left 부분이 어긋나게 되므로
+  여기에 설정하지말고 각각 클래스 이름 더붙여서 설정!! */
+  /* float: right; */
+}
+.news-headline a {
+
+}
+
+/* 자세히 보기 버튼 부분 설정 */
+.btn-view {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+
+
+
+
+/* news - Right 부분 설정!!! */
+.news-right {
+
+}
+.news-items {
+  margin-bottom: 50px;
+}
+
+/* float:left로 하지않고 설정해주기 */
+.news-items > div {
+  display: inline-block;
+  /* float: left; */
+}
+
+.news-thum {
+  width: 280px;
+  cursor: pointer;
+}
+.news-thum:first-child {
+  margin-right: 40px;
+}
+
+
+
+/* 마우스 hover 이벤트 설정 부분 */
+.news-thum:hover img {
+  transform: scale(1.1);
+  /* 이부분에 scale을 적용해주면 이미지가 넘치게 되므로
+  news-thum전체 부분에 overflow: hidden을 설정해주어야함!!! */
+  transition: 0.3s;
+}
+
+
+/* 글씨 너무 띄워져 있어서 따로 설정 */
+.news-thum p {
+  margin-top: 0;
+}
+.news-photo {
+  /* border: 2px solid red; */
+  /* 이미지맞게 설정 01*/
+  display: inline-block;
+  position: relative;
+
+  /* 이미지 넘치는 부분 해결 */
+  overflow: hidden;
+}
+.news-photo img {
+  /* 이미지맞게 설정 02 */
+  /* 이미지 부분 밑의 조금있는 margin 부분 해제해주기 위해 설정 */
+  display: block;
+
+  transition: 0.5s;
+}
+.badge.new {
+  
+}
+
+/* new issue 텍스트 부분 설정 */
+.badge {
+  position: absolute;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  font-size: 12px;
+
+  padding: 0px 5px;
+}
+
+
+/* 이부분 설정 중요함! */
+.news-thum .date {
+  float: right;
+}
+
+/* 모든 작업에서 btn 부분의 높이를 설정할때는 height값으로 설정하는 것이 아니고 padding 값으로 설정 */
+.btn-readmore {
+  background-color: #7b9acc;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  display: block;
+  width: 180px;
+  text-align: center;
+
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* new issue버튼부분임!!!! */
+.badge.new {
+  background-color: #000;
+}
+.badge.hot {
+  background-color: crimson;
+}
+
+
+
+
+
+
+
+/*############ Footer 부분 설정!!! ###########*/
+footer {
+  background-color: #21325b;
+  color: #bdbdbd;
+  font-size: 14px;
+  padding: 60px 0px;
+}
+.footer-inner {
+  margin: auto;
+  width: 1300px;
+}
+.footer-content {
+  overflow: hidden;
+}
+.footer-content > div {
+  float: left;
+}
+.footer-logo {
+  width: 15%;
+}
+.copyright {
+  width: 85%;
+  overflow: hidden;
+}
+.address {
+  padding-top: 20px;
+}
+.address span {
+  display: block;
+} 
+
+
+/* 로고 이미지 부분 설정 */
+.footer-logo img {
+  filter: grayscale(1);
+}
+
+
+
+.policy {
+  float: left;
+}
+.policy-sns {
+  overflow: hidden;
+  border-bottom: 2px solid #32456e;
+  padding-bottom: 20px;
+}
+.policy span:first-child a {
+  color: #bdbdbd;
+}
+.policy span:first-child a:hover {
+  text-decoration: underline;
+}
+
+.policy span:first-child em {
+  font-style: normal;
+  margin: 10px;
+  color: #777;
+}
+
+.policy span:nth-child(2) {
+  display: block;
+}
+.sns {
+  float: right;
+}
+.sns i {
+  color: #fff;
+  font-size: 15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #37466c;
+  margin: 1px;
+
+  line-height: 25px;
+  transition: 0.5s;
+  /* 요소 중앙 */
+  text-align: center;
+}
+.sns i:hover {
+  background-color: #000;
+}
+
+
+
+
+
+
+
+/* Video - Modal창 설정 부분 */
+.video-modal {
+  background-color: #000;
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  /* 평상시에는 이부분이 보이지 않게 설정 */
+  display: none;
+
+  /* 중요! */
+  z-index: 10000;
+}
+/* x-닫기버튼 */
+.close-modal {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  
+}
+.video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.video-content iframe {
+  width: 700px;
+  height: 394px;
+}
+
+
+
+
+
+
+/*### Slick - Slider 설정 부분 ###*/
+/* 넥스트 프리비 버튼 부분 안보이게 */
+.slideshow .slick-arrow {
+  display: none !important;
+  border: 1px solid #000;
+}
+.slideshow img {
+  outline: none;
+}
+
+/* Review Slider - slick 설정 부분 */
+.review-slider .slick-dots li {
+  margin: 0;
+}
+
+/* 선택되어 있지 않을 때! */
+.review-slider .slick-dots li button:before {
+  opacity: 1;
+  /* 크기 설정 */
+  transform: scale(0.8);
+}
+
+/* active-선택되어 있는 부분 설정 
+이부분 설정 중요함!!!!*/
+.review-slider .slick-dots li.slick-active button:before {
+  /* color: red; */
+  opacity: 1;
+  color: transparent; /*색깔을 투명으로*/
+  border: 1px solid #000; /*border갑 설정*/
+  border-radius: 50%;  /*동그랗게 설정*/
+  top: -2px;
+  
+  /* 크기 설정 */
+  transform: scale(0.6);
+}
+
+
+/* next - prev 버튼 부분 설정 */
+.review-slider .slick-arrow {
+  /* border: 1px solid #000; */
+  /* z-index: 1000; */
+}
+
+/* 가상콘텐츠 부분 설정! === 공통 설정
+font-awesome아이콘을 각각 써도 되지만 하나를 사용해서
+다른하나는 회전하여 변경해서 사용함!*/
+.review-slider .slick-prev::before,
+.review-slider .slick-next::before {
+  color: red;
+  /* 유니코드로 지정 */
+  content: '\f104';
+  font-family: fontawesome;
+  color: #000;
+  font-size: 30px;
+  opacity: 1;
+}
+
+/* next버튼 부분 설정 */
+.review-slider .slick-next::before {
+  transform: rotateY(180deg);
+  /* 이부분(before)이 inline요소라서 위에만 적으면 변하지 않음 
+  그러므로 block으로 따로 지정해야함! -- y축으로기준!!! */
+
+  display: block;
+}
+
+/* mockup-slider 부분 slick css 설정 */
+.mockup-slider .slick-arrow {
+  /* 양쪽 화살표 모양 부분 안보이게 설정 */
+  display: none !important;
+}
+.mockup-slider .slick-dots {
+  bottom: 10px;
+  
+}
+.mockup-slider .slick-dots li {
+  /* 탭버튼 간격 조정 */
+  margin: 0;
+}
+.mockup-slider .slick-dots li button:before {
+  color: green;
+}
+
+
+
+
+
+
+/* goto top 부분 설정 */
+.btn-top {
+  position: fixed;
+  /* border: 1px solid red; */
+  right: 20px;
+
+  /* 어느정도 스크롤을 했을때 나타나게 해야하므로 맨처음 페이지 부분영역정도에서는 안보이게설정 */
+  bottom: -50px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 43px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* 이부분도 마찬가지로 CSS에 active 클래스를 설정해주고 js에서 마지막으로
+설정을 해줘야 적용이 되는것임! */
+.btn-top.active {
+  bottom: 20px;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#### 전체부분 - 스크롤시 애니메이션 적용되는 부분 설정 - 모든영역 ####*/
+
+
+/* 애니메이션 01번 ----> l->r 왼쪽에서 오른쪽으로 오는 애니메이션 */
+@keyframes ltr {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 애니메이션 02번 ----> r->l 오른쪽에서 왼쪽으로 오는 애니메이션 */
+@keyframes rtl {
+  0% {
+    /* 오른쪽이므로 이번에는 +값 */
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 애니메이션 03번 ----> u->d 위에서 아래로 오는 애니메이션 */
+@keyframes utd {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ltr {
+  /* both속성은 0% -> 100%로 애니메이션 작동하고 100%에서멈춰있으라는 설정 */
+  animation: ltr 0.5s linear both;
+}
+.rtl {
+  animation: rtl 0.5s linear both;
+}
+.utd {
+  animation: utd 0.5s linear both;
+}
+
+
+

@@ -1,0 +1,207 @@
+/* 너비가 1024이상이고 높이가 900이하일 때 
+!!!!!                     !!!!!
+높이 변경시 반응형 적용 부분임
+!!!!                      !!!!!
+*/
+@media only screen and (min-width: 1024px) and (max-height: 900px) {
+  /* 2번페이지 왼쪽 부분 영역 설정 */
+  .main_intro > .wrap .left {
+    margin-top: 20px;
+    position: relative;
+  }
+  .main_intro > .wrap .left h2 {
+    font-size: 56px;
+    line-height: 60px;  
+  }
+
+  .main_intro > .wrap .left .inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .main_intro > .wrap .left h2 span {
+    display: block;
+  }
+  .main_intro > .wrap .left .paragraph {margin: 20px 0px;}
+  /*/// 2번페이지 왼쪽 부분 영역 설정 ///*/
+
+
+  /* 2번 페이지 오른쪽 부분 영역 - 비디오 설정 */
+  .main_intro > .wrap .right video {
+    max-width: 500px;
+  }
+
+
+  /* 3번페이지 6개 비디오 리스트 부분 영역 설정 */
+  .main_work {
+    height: auto;  
+  }
+  .video_wrap, .vid {
+    overflow-y: auto;
+  }
+}  
+
+
+
+@media only screen and (max-width: 1650px) {
+  .f_wrap .inner {
+    width: calc(100% - 80px);
+    max-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .head_wrap .wrap,  
+  .main_set .swiper-slide .text_box {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0px 40px;
+  }
+  .head_wrap .nav_box {
+    right: 40px;
+  }
+
+  .main_set .swiper-slide .text_box p {
+    font-size: 62px;
+  }
+
+
+  /* 4가지 부분 설정 공통 */
+  .main_intro .wrap, 
+  .main_work .wrap, 
+  .main_news .wrap, 
+  .layer_wrap .wrap  {
+    padding: 5% 40px;
+    width: 100%;
+    /* margin: 0 auto; */
+    max-width: 1280px;
+  }
+
+  .main_intro > .wrap .right, 
+  .main_intro > .wrap .left {width: 50%;}
+
+  .main_intro > .wrap .right video {
+    max-width: 500px;
+  }
+  .main_work {height: auto;}
+  .main_news .news_wrap .news_box {padding-bottom: 80px;}
+  .main_news .news_wrap .news_box li a {
+    padding: 20px 40px;
+  }
+  .main_intro .hash span {
+    font-size: 18px;
+  }
+  .main_intro > .wrap .left .paragraph {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  .main_intro .download a:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .head_wrap .wrap, 
+  .main_set .swiper-slide .text_box {
+    padding: 0 20px;
+  }
+  .head_wrap .nav_box,
+  .nav_box {
+    right: 20px
+  }
+  .main_intro > .wrap .left {
+    margin-top: 15%;
+  }
+  .main_intro > .wrap .left h2 {
+    line-height: 60px;
+  }
+  .main_intro > .wrap .left .paragraph {
+    font-size: 16px;
+  }
+  .main_intro .download a {
+    width: 180px;
+    font-size: 14px;
+  }
+  .main_intro > .wrap .right video {
+    max-width: 300px;
+  }
+  .work_thumbs .item {
+    width: calc(50% - 15px);
+  }
+
+  /* 작성 순서에 따라 형태 달라짐!!! */
+  .work_thumbs .item:nth-child(3n) {
+    margin: 0 30px 30px 0;
+  }
+  .work_thumbs .item:nth-child(even) {
+    margin: 0 0 30px 0;
+  }
+  
+  .f_wrap .inner {
+    width: calc(100% - 40px);
+  }
+  .f_wrap .f_block .f_line {
+    float: none;
+    width: 100%;
+  }
+
+  .main_work .btn_wrap a {
+    width: 100%;
+    height: 45px;
+    display: inline-block;
+    line-height: 43px;
+    border: 1px solid #6f6f6f;
+    text-align: center;
+    columns: #fff;
+  }
+
+  .main_news .news_wrap .news_box li a {
+    padding: 20px 25px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .main_set .swiper-slide .text_box p {
+      font-size: 30px;
+  }
+  .main_intro {
+    padding: 50px 0 0 0 ;
+  }
+  .main_intro, .main_work {height: auto;}
+  
+  .main_intro .wrap, 
+  .main_work .wrap, 
+  .main_news .wrap, 
+  .layer_wrap .wrap {
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
+
+  .main_intro > .wrap .right, 
+  .main_intro > .wrap .left {
+    width: 100%;
+  }
+  .main_intro > .wrap .left {margin: 0;}
+  .main_intro .download {text-align: center;}
+  .main_intro > .wrap .right video {
+    position: static;
+    transform: translate(0,0);
+  }
+
+  .main_intro > .wrap .right {
+    position: static;
+    text-align: center;
+    margin:  50px 0px;
+  }
+
+  /* 3번 페이지 부분 설정 */
+  .main_intro, .main_work {
+    height: auto;
+  }
+  .work_thumbs .item {
+    width: 100%;
+    margin: 0 0 20px 0 !important;
+  }
+  
+}

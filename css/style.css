@@ -1,0 +1,1591 @@
+/*구글 폰트 설정 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
+/* 폰트 어썸 CDN 설정 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+/* Reset CSS 설정부분 */
+* {
+  /* 늘어나는 것을 방지하기위해 적용 
+  예를들어 300 x 300 크기의 div에 padding을 50px을 주게되면
+  300 + (왼쪽/오른쪽 - 50 50)으로 400px로 늘어나는것을 방지하기 위해 적용*/
+  box-sizing: border-box;
+}
+ul {
+  list-style: none; 
+
+  /* 새로 추가!!! */
+  padding: 0;
+}
+a {
+  text-decoration: none;
+
+}
+
+/* Default CSS 설정 - body 설정*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+
+  /* vh 찾기!! */
+  height: 100vh;
+  background-color: #fff;
+}
+
+
+/* 전체 레이아웃 조정 */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  /* .content의 position과 연결 */
+  position: relative;
+}
+
+.cd-section .content {
+  background-color: #ddd;
+  position: absolute;
+
+  /* 이때 width를 100%으로 해제하고 calc를 이용!1
+  left에 20px을 주었으니 왼쪽오른쪽20px만큼해서 40px사용 */
+  /* width: 100%; */
+  width: calc(100% - 40px);
+
+  /* 높이부분도 위의 width값 처럼 적용해주기 calc사용!!! */
+  /* height: 100%; 이때는 위에 60px 아래 20px 설정할것이므로
+  총 80px을 빼주고 적용해주기!!*/
+  height: calc(100% - 80px);
+
+  left: 20px;
+  /* height가 100%라서 뜨지않음 */
+  bottom: 20px;
+
+  /* 이미지넘침을 방지하기위해 */
+  overflow: hidden;
+}
+
+
+/* 헤더 부분 */
+header {
+  /* 고정해놓기!! */
+  position: fixed;
+
+  /* 위치값 줘야 */
+  top: 0;
+  left: 0;
+
+  /* 설정이유 - position absolute나 fixed를 주면 100%를 꼭 설정해주어야함!!! */
+  width: 100%;
+}
+header .gnb_inner {
+  /* border는 임시로!! */
+  /* border: 1px solid #000; */
+
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  
+  /* 높이값 서로 맞춰주기!! */
+  height: 60px;
+  line-height: 60px;
+}
+
+header .gnb_inner .logo {
+  float: left;
+}
+header .gnb_inner .logo img {
+  padding-top: 17px;
+}
+
+header .gnb_inner .logo a {}
+
+header .gnb_inner .gnb {
+  float: right;
+}
+
+/* 이부분은 PC 버전에서 사용하지 않을것이므로! */
+header .gnb_inner .gnb .menu {
+  display: none;
+}
+header .gnb_inner .gnb .menu a {}
+
+header .gnb_inner .slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* 트리거 설정 - pc버전에서는 보이지 않게할것임!! */
+header .gnb_inner .trigger {
+  display: none;
+  cursor: pointer;
+}
+
+/*// 헤더 부분 끝!!!*/
+
+
+
+/* gototop 부분 설정 */
+.gototop {
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    border: 1px solid #fff;
+
+    /* a태그는 inline요소이므로 width/height값을 가지려면 block으로 바꿔주어야함 */
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+
+    /* 기본적인 평상시 상태일 때 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+    /* background: violet; */
+    background: #000;
+}
+.gototop.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* hiring 설정 부분 */
+.btn_hiring {
+  position: fixed;
+  /* right: 50px; */
+  left: 50px;
+  bottom: 50px;
+  color: #fff;
+  padding: 10px 20px;
+  /* background-color: #000; */
+  background-color: cadetblue;
+  border-radius: 20px;
+
+  /* 가로,세로,퍼짐정도 */
+  box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.5);
+
+  transition: 0.5s;
+}
+.btn_hiring .fa {
+  transform: rotateY(180deg);
+  margin-right: 5px; 
+}
+
+
+/* 마우스를 클릭하고 떼지않은 상태가 active이다!! 
+===> 이설정여기에해주고 btn_hiring에 transition도 설정해주면 끝
+---> 버튼을 눌리는 느낌을 주고싶을 때 작성!!!*/
+.btn_hiring:active {
+  transform: scale(0);
+}
+
+
+
+
+
+
+
+
+/* Section - Home 부분 설정 - 애니메이션 포함
+애니메이션은 총 4가지 부분임!!!! */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+
+/* 2번 애니메이션 - 검정 빈화면 설정 */
+.home-inner::before {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  /* width: 10px; */
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* display: none; */
+
+  /* 애니메이션 지정 */
+  /* animation: overlay 1s 0s ease-in-out;
+  animation-fill-mode: both; */
+
+  /* 이부분 애니메이션이 더늦게 시작되도록 2s로 설정 */
+  animation: overlay 1s 2s ease-in-out both;
+}
+
+
+/* you can ~~ 텍스트 부분 설정 */
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 50px;
+  font-weight: normal;
+
+  /* 글자사이 간격 띄우기 */
+  line-height: 1.2em;
+
+  /* 텍스트가운데 정렬 */
+  text-align: center;
+
+  /* 위치 정중앙 */
+  margin: 0;
+  /* display: none; */
+  font-family: 'Source Sans Pro', sans-serif;
+
+  /* 애니메이션 */
+  animation: slideup 2s 0s linear;
+  animation-fill-mode: both; /*이부분에서 both로 설정해야 애니메이션이 끝나고 100%일때
+  사라지게 설정가능!!*/
+
+}
+
+
+.welcome-text span {
+  /* 이렇게 설정하면 줄이 2줄로 나타남 */
+  display: block; 
+  font-size: 26px;
+}
+.welcome-text span .far {
+  color: crimson;
+}
+.opacity-image {
+  /* background: url("../img/section-bg-01.jpg")no-repeat center center; */
+  /* background: url("../img02/main/home-background14.jpg")no-repeat center center; */
+  background: url("../img02/main/home34.jpg")no-repeat center center;
+  background-size: cover;
+  height: 100%;
+
+  /* display: none; */
+  opacity: 0;
+
+  /* 애니메이션 지정 */
+  animation: opacity-image 1s 2.5s ease-in both;
+}
+
+
+/* Creative / ~~ specialits 부분 */
+.home-heading {
+  /* display: none; */
+  /* border: 1px solid red; */
+  
+  position: absolute;
+  top: 50%;
+  /* left: 40%;
+  transform: translate(-50%, -50%); */
+
+  /* 마지막 글자 3개 차례 애니메이션설정을 위해
+  원래 적어놨던 left:40%와 transform 부분 설정 해주기!! */
+  left: 300px; /*애초부터 아예 왼쪽으로 땅겨놓기!!*/
+  transform: translateY(-50%); /*수직은 -50%*/
+}
+.home-heading span {
+  font-size: 95px;
+  /* font-size: 105px; */
+  font-weight: 600;
+  /* block으로 설정해주어야 1줄형태로 나열 가능 */
+  display: block;
+  color: #fff;
+
+  
+  /* border: 1px solid #000; */
+  overflow: hidden;
+  width: 0;
+
+  /* 애니메이션 설정 */
+  animation: reveal 1s 3s ease-in-out both;
+
+}
+.home-heading span:nth-child(1){
+  animation-delay: 3s;
+}
+.home-heading span:nth-child(2){
+  animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3){
+  animation-delay: 3.4s;
+}
+
+
+
+
+/* 애니메이션 지정 본체 부분 */
+/* 애니메이션 1번 keyframes == you can do it 텍스트 설정 부분!!! 
+=>  .welcome-text 이부분에 설정!*/
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+
+  }
+}
+
+/* 애니메이션 2번 keyframes == .home-heading::before 이부분에 설정 */
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%; /*right:0 ===> left로 처음부터 설정했으면 다 동일하게 left로 설정해주어야함!!*/
+  }
+}
+
+/* 애니메이션 3번 keyframes == .opacity-image 부분 설정 */
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* 애니메이션 4번 keyframes == .home-heading 부분 설정 */
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Section - about 부분 설정 */
+.about-inner {
+  /* background: url("../img/line-drawing.png")no-repeat right bottom; */
+  /* 높이값을 주어야 bottom위치로 적용이 된다 */
+  height: 100%;
+
+  /* color를 붙여주어야 함!!! 
+  background만 적어주면 이미지가 보이지않음*/
+  /* background-color: #0dace3; */
+
+  /* background: teal url("../img/line-drawing.png")no-repeat right bottom; */
+  /* background: #0088cc url("../img02/main02/second03.jpg")no-repeat center center; */
+  background: url("../img02/main/home31.jpg")no-repeat center center;
+  background-size: cover;
+}
+.about-inner .about-items {
+  /* border: 1px solid red; */
+  width: 60%;
+  color: #fff;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 100px;
+}
+
+
+.about-inner .about-items .item {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.about-inner .about-items .item h3 {
+  font-size: 28px;
+  font-weight: 600;
+  transition: 0.5s;
+  letter-spacing: -1px;
+
+  /* 위치 조정 */
+  margin: 0;
+}
+.about-inner .about-items .item:hover h3 {
+  /* color: #000; */
+  color: yellow;
+}
+
+
+.about-inner .about-items .item img {
+  height: 120px;
+
+  /* overflow-hidden을 부모요소에 적용시켜주기!! */
+  float: left;
+  margin-right: 20px;
+
+  filter: invert(1);
+  transition: 0.5s;
+}
+.about-inner .about-items .item:hover img {
+  filter: invert(0.3);
+}
+
+
+.about-inner .about-items .item span {
+
+}
+.about-inner .about-items .item p {
+  /* 텍스트 어긋나는 부분 조정하기 위해 설정 */
+  overflow: hidden;
+  /* font-size: 18px; */
+  font-size: 20px;
+}
+
+
+
+
+/* Section - plan 부분 설정 */
+.plan-inner {
+  background-color: #1d1b24;
+  height: 100%;
+}
+.plan-inner .plan-feature {
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plan-inner .plan-feature > div {
+  /* border: 1px solid #ddd; */
+  height: 300px;
+  color: #bbb;
+}
+.plan-info {
+  
+}
+.plan-info > div {
+  /* border: 1px solid blue; */
+  float: left;
+}
+
+.plan-heading {
+  width: 70%;
+  padding-right: 50px;
+}
+.plan-heading h2,
+.history-info h2 
+ {
+  color: #fff;
+  margin: 0;
+}
+.plan-heading p {
+  font-size: 16px;
+  line-height: 1.5em;  
+}
+
+.plan-photo {
+  width: 30%;
+}
+.plan-photo img {
+  height: 265px;
+}
+.plan-heading .bar {
+  background-color: dodgerblue;
+
+  /* 왼쪽으로 정렬하고싶으면 이속성으로 바꿔줘야함!
+  이미 margin 0 auto로 적용되어있던것에 inline-block을 주어 왼쪽으로 위치시킴 
+  즉 block요소가 아닌상태로 만들어주는 것임!*/
+  display: inline-block;
+}
+
+
+
+
+
+
+.history-info {
+
+}
+.history-info .bar {
+  background-color: dodgerblue;
+  display: inline-block;
+}
+.history-slider {
+  /* border: 1px solid red; */
+}
+.history-slider div {
+  /* 슬릭 js 넘기는 부분 클릭시 outline 해제!! */
+  outline: none;
+}
+.history-slider div h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5em;
+}
+.history-slider div h4 span {
+  color: dodgerblue;
+}
+.history-slider div p {
+  /* font-size: 16px; */
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+/* Click-텍스트 부분 a태그  */
+.page {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+
+
+/* Section - award 부분 설정 */
+.awards-inner {
+  height: 100%;
+  border: 1px solid #ddd;
+}
+
+/* 바로 밑의 div부분만 적용 */
+.awards-inner > div {
+  /* border값은 임시로 지정 */
+  /* border: 1px solid #000; */
+  float: left;
+  width: 50%;
+
+  /* 여기서 height값 100%는 먹지않음!! 
+  이부분의 부모요소의 높이값이 없으므로!! 
+  위에도 height: 100%를 적용시켜주어야 함!
+  */
+  height: 100%;
+  position: relative;
+}
+
+
+/* about-award 는 awards-left
+  victory-jump 는 awards-right
+*/
+.about-heading {
+  /* position이 absolute가 되면 모든 요소는 inline-block으로 적용된다 */
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  width: 70%;
+}
+.about-heading h2 {
+  margin: 0;
+}
+.about-heading p {
+  color: #999;
+  /* font-size: 16px; */
+  font-size: 21px;
+  /* em단위 --> line-height에 항상 적용해주기!! 
+  1.5em은 16px 곱하기 1.5라는 말임!!
+  em은 font-size에 비례하므로 px로 사용하지말기!*/
+  line-height: 1.5em;
+
+  /* margin-bottom: 40px; 
+  방법(2)
+  */
+}
+.view-awards {
+  color: #bbb;
+  border: 1px solid #bbb;
+  /* padding: 5px 15px; */
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+
+
+  /* 방법(1)
+  30px만큼 margin값을 주려면 이부분을 display를
+  inline-block로 설정해주어야 함!! */
+  display: inline-block;
+  margin-top: 30px;
+}
+.view-awards:hover {
+  background-color: #31c0ce;
+  color: #fff;
+
+  /* 마우스 오버시 border값 투명색으로 안보이게끔 설정 */
+  border-color: transparent;
+}
+
+/* 왼쪽영역 부분 */
+.awards-left {
+  background-color: #1a1f24;
+  color: #fff;
+}
+
+/* hr태그를 디자인할때는 이부분만 기억하기!!! */
+hr.bar {
+  width: 50px;
+  height: 4px;
+  border: none;
+  background-color: crimson;
+
+  margin: 30px auto;
+  /* 위부분은 
+  margin-top: 30px
+  margin-bottom: 30px과 같은의미!! 
+  */
+
+}
+
+
+/* 오른쪽 영역 부분 */
+.awards-right {
+  background-color: #fff;
+}
+.awards-right img {
+  /* 이미지 위치 정중앙에 배치 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+/* Section - Location 부분 설정 */
+.location-inner {
+  background: url("../img/background-location.jpg")no-repeat center center;
+  /* background: url("../img02/main/home14.jpg")no-repeat center center; */
+  /* background-size: auto 100%; */
+  height: 100%;
+
+  position: relative;
+}
+
+/* befor와 after는 기본적으로 inline요소임!!! -- 그러므로 크기값을 가질 수 없음!!*/
+.location-inner::before {
+  content: '';
+  background-color: rgba(0,0,0, 0.75);
+  /* display: block; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.feature {
+  /* border: 1px solid red; */
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #bbb;
+  transform: translate(-50%, -50%);
+}
+.feature > div {
+  /* border: 1px solid #000; */
+  float: left;
+  width: 50%;
+}
+
+.office {
+  width: 60%;
+  padding-right: 100px;
+}
+.service {
+  width: 40%;
+}
+
+.office b {
+  font-weight: normal;
+}
+.office h2 {
+  color: #1db1f0;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 5px;
+}
+.office p {
+  /* font-size: 16px; */
+  font-size: 20px;
+  line-height: 1.5em;
+  /* line-height: 1.2em; */
+}
+.office p::before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+
+.office span {
+  color: #fff;
+}
+
+
+.office .customer {
+  margin-top: 40px;
+}
+
+
+.service .service-item {
+  margin-bottom: 40px;
+}
+.service .service-item .fab,
+.service .service-item .fas
+ {
+  color: #1db1f0;
+  font-size: 40px;
+}
+.service .service-item h3 {
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+}
+.service .service-item p {
+  font-size: 20px;
+}
+.service .service-item p::before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Section - Contact 부분 설정 */
+.contact-inner {
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+.contact-feature {
+  /* border: 1px solid red; */
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-feature > div {
+  /* border: 1px solid #000; */
+  /* height: 400px; */
+  float: left;
+  width: 50%;
+
+  /* form과 info를 전체적으로 떨어뜨려주기 위해 설정!! */
+  padding: 20px;
+}
+
+/* Contact form 부분  */
+.contact-form {
+  
+}
+
+/* 나중에 작업할 때는 h1~ h6까지 margin: 0 설정해주기!! */
+.contact-form h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+.contact-form h3 b {
+
+}
+.contact-form .send-box {
+  
+}
+/* label은 inline 요소! */
+.contact-form .send-box label {
+  /* 자연스럽게 구조 바뀜 */
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+
+  margin: 10px 0px;
+  margin-top: 20px;
+}
+.contact-form .send-box label span {
+  color: crimson;
+  font-weight: normal;
+}
+.contact-form .send-box input[type=email],
+.contact-form .send-box input[type=text],
+.contact-form .send-box textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+
+  /* 클릭했을때 보더값 진해지는 부분 해제하는것임! */
+  outline: none;
+  width: 100%;
+
+  transition: 0.5s;
+}
+.contact-form .send-box input[type=email]:hover,
+.contact-form .send-box input[type=text]:hover,
+.contact-form .send-box textarea:hover {
+  border: 1px solid #0088cc;
+  box-shadow: 0 0 5px #0088cc;
+}
+
+/* 마우스를 클릭했을 때도 효과 지정 유지하기 위해 작성 */
+.contact-form .send-box input[type=email]:focus,
+.contact-form .send-box input[type=text]:focus,
+.contact-form .send-box textarea:focus {
+  border: 1px solid #0088cc;
+  box-shadow: 0 0 5px #0088cc;  
+  background-color: #eee;
+}
+
+
+
+/* button은 inline-block 요소임!!!!!! 그래서 다르게 지정하지 않고
+margin top 값 적용 가능함! */
+.contact-form .send-box button {
+  background-color: #0088cc;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+.contact-form .send-box button:hover {
+  background-color: #000;
+}
+
+
+
+
+
+
+/* Contact info 부분 */
+.contact-info {
+
+}
+.contact-info h4 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 20px;
+}
+.contact-info h4 b {
+
+}
+.contact-info ul {
+  
+}
+.contact-info ul li {
+  line-height: 2em;
+  /* body부분의 font-size에 관련 */
+}
+.contact-info ul li:last-child {
+  color: #0088cc;
+}
+.contact-info p {
+  line-height: 1.5em;
+}
+
+
+
+/* Slick js - css 설정 부분 */
+.history-slider .slick-arrow {
+  display: none !important;
+}
+.history-slider .slick-dots li button:before {
+  font-size: 40px;
+  color: #fff;
+}
+.history-slider .slick-dots li {
+  margin: 0;
+}
+
+
+
+
+
+/* Section project 부분- 프로토 작성본 ---- project 부분 설정임!!! */
+.project-inner {
+  height: 100%;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.project-info {
+  width: 25%;
+}
+.project-photo {
+  width: 75%;
+  /* 이미지 끊어진 부분 해결 */
+  overflow: hidden;
+}
+.tabs {
+  /* border: 5px solid red; */
+  height: 100%;
+  width: 300%;
+  transition: 0.5s;
+}
+.tab {
+  height: 100%;
+  /* border: 5px solid yellow; */
+  float: left;
+  width: 33.3333%;
+}
+.tab > div {
+  /* border: 5px solid blue; */
+  height: 100%;
+  float: left;
+}
+
+input[name=tabmenu] {
+  display: none;
+}
+.btn {
+  /* border: 2px solid #000; */
+  position: absolute;
+  left: 0;
+  width: 25%;
+  bottom: 30px;
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+.btn label {
+  cursor: pointer;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 8px;
+  position: relative;
+
+}
+.btn label::before {
+  content: '';
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  transition: 0.3s;
+}
+.btn label:hover::before {
+  border: 1px solid #aaa;  
+}
+input[id=tab1]:checked ~ .btn label[for=tab1]::before,
+input[id=tab2]:checked ~ .btn label[for=tab2]::before,
+input[id=tab3]:checked ~ .btn label[for=tab3]::before {
+  border: 1px solid #aaa;  
+}
+
+
+/* input[id=tab2]:checked ~ .btn label:hover::before {
+  color: red;
+}
+input[id=tab3]:checked ~ .btn label:hover::before {
+  color: red;
+} */
+
+
+input[id=tab1]:checked ~ .tabs {
+  margin-left: 0;
+}
+input[id=tab2]:checked ~ .tabs {
+  margin-left: -100%;
+}
+input[id=tab3]:checked ~ .tabs {
+  margin-left: -200%;
+}
+
+/* project - info 부분 설정 - 본체 텍스트 설정 */
+.project-info {
+  padding: 50px;
+  position: relative;
+}
+.project-info h3 {
+  font-size: 20px;
+
+  /* before속성에 position값을 주었으므로 h3 텍스트 부분에도 
+  position값을 주어야함!!  우선순위 설정임!*/
+  position: relative;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.project-info ul {
+  line-height: 2em;
+  margin: 50px 0px;
+}
+.project-info ul li {
+
+}
+
+/* html부분에 태그입력하지 않고 css만입력해서 화살표 설정한것임! */
+.project-info ul li::before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+.project-info .detail {
+  /* border: 1px solid #000; */
+  margin-bottom: 50px;
+}
+.project-info .detail div {
+  display: inline-block;
+  text-align: center;
+  width: 32.6%;
+  /* border: 1px solid #000; */
+  color: #999;
+}
+.project-info .detail div span {
+  font-size: 36px;
+  font-weight: bold;
+  /* span태그는 inline요소이므로 한줄로 나타내기 위해
+  display:block 설정 */
+  display: block;
+  color: #000;
+
+  margin-bottom: 10px;
+}
+.project-info .view-project {
+  background-color: #3f3f3f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  /* hover시에 a부분전체가 늘어나는 것을 해결하기위해서는
+  padding값을 주지말고 width값을 주어야함!! */
+  /* padding: 10px 50px; -- 대신 height값은 padding으로 주면된다!!*/
+  width: 250px;
+  display: inline-block;
+  padding: 10px;
+
+  text-align: center;
+  transition: 0.5s;
+}
+.project-info .view-project:hover {
+  background-color: #000;  
+}
+.project-info .view-project .fa {
+  transition: 0.5s;
+}
+.project-info .view-project:hover .fa {
+  margin-left: 30px;
+  transition: 0.5s;
+}
+
+.project-info::before {
+  content: attr(data-text);
+  font-size: 130px;
+  /* color: #eee; */
+  /* color: aquamarine; */
+  color: cadetblue;
+  opacity: 0.5;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+
+
+.cd-prev,
+.cd-next {
+  display: none;
+}
+
+
+
+
+
+/* Subpage 설정 부분 시작!!!! */
+
+/* hiring 페이지 부분 설정 */
+
+
+.modal {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* 설정구역 (1)번 */
+.header {
+  /* border: 1px solid #000; */
+
+  /* 마우스 스크롤시에도 고정되도록하기위해 설정! 
+  position fixed만 적용하면 어긋나므로 무조건 너비값을 width:100%!!!!!!
+  즉 - position-fixed는 너비값을 잃으면서 inline-block으로 되므로!
+  width값을 100%로~~*/
+  position: fixed;
+  width: 100%;
+
+  background-color: #fff;
+  z-index: 100;
+}
+.header-inner {
+  /* border: 1px solid red; */
+  width: 95%;
+  height: 90px;
+  line-height: 90px;
+  margin: auto;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-display {
+  font-size: 16px;
+}
+/*/// 설정구역 (1)번 ///*/
+
+
+
+
+/* 설정구역 (2)번 */
+.hiring-main {
+  /* border: 1px solid #000; */
+  height: 600px;
+  position: relative;
+}
+
+.hiring-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* hiring텍스트 가운데정렬 */
+  text-align: center;
+}
+.hiring-heading span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  /* border: 1px solid #000; */
+  
+  position: relative;
+}
+.hiring-heading span::before,
+.hiring-heading span::after {
+  content: '';
+  height: 2px;
+  width: 50px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+}
+.hiring-heading span::before {
+  /* 100%로 하면 너무 옆에 바짝붙으므로! */
+  right: 120%;
+}
+.hiring-heading span::after {
+  /* 100%로 하면 너무 옆에 바짝붙으므로! */
+  left: 120%;
+}
+
+
+.hiring-heading h1 {
+  font-size: 100px;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 40px;
+}
+
+/*//// 설정구역 (2)번 ////*/
+
+
+
+
+/* 설정구역 (3)번 */
+.hiring-info {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.hiring-info > div {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 600px;
+  float: left;
+}
+.center-parent {
+  position: relative;
+}
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 텍스트 줄이 안맞는 부분을 해결하기 위해 */
+  width: 70%;
+}
+.center-child h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+.center-child p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+/* .photo1 {
+  background: url("../img/hiring-main-01-01.jpg")no-repeat center center;
+  background-size: cover;
+}
+.photo2 {
+  background: url("../img/hiring-main-01-01.jpg")no-repeat center center;
+  background-size: cover;
+} */
+.photo img {
+  width: 100%;
+}
+
+.hiring-slogan {
+  padding: 100px 0px;
+}
+.hiring-slogan p {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  
+  position: relative;
+}
+.hiring-slogan p::before {
+  content: ',,';
+  font-family: 'Overpass', sans-serif;
+  font-size: 200px;
+
+  position: absolute;
+  color: #ddd;
+  transform: rotate(180deg);
+  top: -82px;
+  left: -35px;
+}
+
+
+
+.hiring-contact ul {
+  display: inline-block;
+  /* display를 inline-block으로 설정하면 사이에 5~6px 정도가 기본적으로
+  남아있으므로 width값을 50%로 지정하면 맞지않음!!! */
+  width: 49%;
+  /* border: 1px solid #000; */
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.hiring-contact ul li:first-child {
+  font-weight: 400;
+}
+.hiring-contact ul li:last-child {
+  color: dodgerblue;
+}
+.sns {
+
+}
+.sns a {
+  position: relative;
+  font-size: 15px;
+  color: #000;
+
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin: 2px;
+  transition: 0.3s;
+
+}
+/* 이부분 before로 설정이유 - :before의 크기가 커지고 작아지게 설정해주어야
+작동이 되므로!!! + transform 속성을 중복해서 사용하면 적용 안된다!!!! */
+.sns a::before {
+  content: '';
+  position: absolute;
+  /* background-color: red; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: 0.3s;
+  /* transform: scale(0); */
+}
+.sns a:hover {
+  color: #fff;
+}
+.sns a:hover::before {
+  /* 이때도 translateX위치를 유지한채 커져야 하므로 이렇게 작성!!! */
+  transform: translateX(-50%) scale(1);
+}
+
+/* before 부분의 색을 바꿔주는 것임!!! */
+.sns a:nth-child(1):before {
+  background-color: #3b5999;
+}
+.sns a:nth-child(2):before {
+  background-color: #55acee;
+}
+.sns a:nth-child(3):before {
+  background-color: #0077B5;
+}
+.sns a:nth-child(4):before {
+  background-color: #e4405f;
+}
+.sns a:nth-child(5):before {
+  background-color: #cd201f;
+}
+.sns a:nth-child(6):before {
+  background-color: #25D366;
+}
+
+
+/*/// 설정구역 (3)번 ////*/
+
+
+
+
+
+
+
+
+/* Project-detail-01 페이지 부분 설정!!! 
+클래스 선택자 hiring 페이지 클래스랑 겹치지 않게 잘 선택해서 작성하기!!!!!*/
+.hiring-main.project-main01 {
+  background: url("../img/project-main-01-01.jpg")no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hiring-main.project-main01 .hiring-heading,
+.hiring-main.project-main02 .hiring-heading,
+.hiring-main.project-main03 .hiring-heading 
+{
+  color: #fff;
+  /* 이미 .hiring-main 클래스에 position:absolute가 들어가 있으므로
+  font-size크기를 크게하면 줄이 2줄로되는것을 방지하기 위해
+  width:100%로 설정!!! */
+  width: 100%;
+  /* border: 1px solid red; */
+
+  /* 이부분에 텍스트 내려오는 애니메이션 부분 설정해주기!!! - 다포함하므로!! */
+  animation: slidedown 1s 0s linear both;
+}
+.hiring-main.project-main01 .hiring-heading h1,
+.hiring-main.project-main02 .hiring-heading h1,
+.hiring-main.project-main03 .hiring-heading h1 {
+  font-size: 70px;
+}
+
+/* .hiring-main.project-main01 .hiring-heading span::before, .hiring-main.project-main01 .hiring-heading span::after,
+.hiring-main.project-main02 .hiring-heading span::before, .hiring-main.project-main02 .hiring-heading span::after,
+.hiring-main.project-main03 .hiring-heading span::before, .hiring-main.project-main03 .hiring-heading span::after {
+  background-color: #fff;
+} */
+
+/* 가상콘텐츠 - 짝대기 왼쪽/오른쪽 부분 설정!! */
+.project-detail .hiring-heading span:before,
+.project-detail .hiring-heading span::after {
+  background-color: #fff;
+}
+
+.project-detail .hiring-info {
+  /* 이미지 사이 공간 띄워져 있는 부분 해제 */
+  margin-bottom: 0;
+}
+
+/* slogan 부분 쉼표 부분 위치 조정!!! */
+.project-detail .hiring-slogan p:before {
+  left: -100px;
+}
+
+/* photo클래스의 ul 리스트 부분 설정 */
+.photo.project-info {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 120px;
+}
+
+/* 애니메이션 지정 부분 */
+@keyframes slidedown {
+  0% {
+    /* 처음에는 안보이게하고 위에 위치하도록 */
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    /* 100%일 때는 보이게하고 위치 원위치로 설정 */
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* Project-detail 02 페이지 부분 설정!! */
+.hiring-main.project-main02 {
+  background: url("../img/project-main-02-01.jpg")no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Project-detail 03 페이지 부분 설정!! */
+.hiring-main.project-main03 {
+  background: url("../img/project-main-03-01.jpg")no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+/* hiring / view-project 버튼 클릭시 모달창(레이어 팝업창) 나타나도록
+설정하는 부분 ===> Feather light 설정부분!! */
+.featherlight .featherlight-content {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: auto;
+  /* padding: 25px 25px 0; */
+  padding: 0;
+  border-bottom: 25px solid transparent;
+  margin-left: 0%;
+  margin-right: 0%;
+  max-height: 100%;
+  background: #fff;
+  cursor: auto;
+  white-space: normal;
+  width: 100%;
+  height: 100%;
+}
+
+.featherlight iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #000; */
+}
+
+
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 70px;
+  line-height: 25px;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  outline: none;
+}
+
+
+
+/* Mouse Scoll 설정 부분 */
+/* 마우스 스크롤 적용 부분 설정 (1)번 스타일 부분 */
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  /* background-color: #2f3542; */
+  background-color: #0077B5;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+
+
+
+header.active {
+  /* background-color: grey; */
+  /* border-bottom: 2px solid #eee; */
+  /* background-color: cornflowerblue; */
+  background-color: azure;
+}
+header {
+  z-index: 100;
+  transition: 0.5s;
+}
+
+
+
+
+.opacity-image {
+  position: relative;
+}
+.opacity-image::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.about-inner {
+  position: relative;
+}
+.about-inner::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+
+/* 모바일 start */
+
+
+/*💎💎💎 Article - Main 설정 부분 💎💎💎*/
+main {
+  height: 600px;
+  color: #fff;
+  /* background: url("https://images.unsplash.com/photo-1445384763658-0400939829cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")no-repeat; */
+  /* background-position: top left; */
+    
+  background: url("../img/ps4_01.jpg")no-repeat top right;
+  background-size: cover;
+    
+
+  position: relative;
+}
+/* Main 부분의 첫번째 div */
+main header div a {
+  float: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 2rem 10%;
+}
+
+/* reset.css에 내가 따로 적어놔서 재정의 해주기! */
+main header div a:link, 
+main header div a:visited {
+  color: white;
+}
+
+main header span {
+  float: right;
+  color: white;
+  font-size: 3rem;
+  margin: 2rem 10%;
+  cursor: pointer;
+}
+main header {
+  position: relative;
+}
+
+main header nav {
+  position: absolute;
+  width: 0%;
+
+  /* 화면전체를 꽉 채울때는 vh를 사용 -이렇게되면 전체가 다 잡히게된다! 
+  즉 현재 보이는 화면에서 100%로 다 잡아주는 속성임!!!*/
+  height: 100vh;
+
+  /* background: red; */
+  background: rgba(40, 0, 0, 0.8);
+
+  /* 맨위에 올라가로독 설정 */
+  z-index: 1;
+
+  /* width값 0으로주고 안보이게 임시 설정!!!!!!!! */
+  overflow-x: hidden;
+
+  transition: 0.5s;
+}
+nav a {
+  color: white;
+
+  /* 1줄에 1개 영역 차지하도록 */
+  display: block;
+  /* background: blue; */
+  text-align: center;
+
+  padding: 1.4rem;
+
+  clear: both;
+}
+nav a:hover {
+  background: crimson;
+  color: white;
+    
+}
+nav a:link {
+  color: white;
+}
+
+nav :first-child {
+  /*clear:both와 함께작성!!!  */
+  float: right;
+
+  font-size: 2rem;
+  margin: 2rem 10%;
+  cursor: pointer;
+}
+/* x표시 버튼 부분 설정 */
+nav a:link:first-child {
+  color: white;
+}
+
+/*  */
+/* first-child는 제외하고 설정한다는 말임 (1)*/
+nav a:not(:first-child) {
+  clear: both;
+  color: white;
+  display: block;
+  padding: 1.4rem;
+  text-align: center;
+}
+/* first-child는 제외하고 설정한다는 말임 (2)*/
+nav a:not(:first-child):hover {
+  background: crimson;
+  color: white;
+}
+
+
+/* Main 부분의 두번째 div */
+main>div  {
+  position: absolute;
+  background: none;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+main div p {
+  padding: 2rem;
+}
+
+
+
+
+
+
+/*💎💎💎 Article - Get - Text 설정 부분 💎💎💎*/
+article.get-text {
+  padding: 5rem 10%;
+  text-align: center;
+}
+article.get-text > div {
+  margin-top: 2rem;
+  transition: 0.8s;
+}
+article.get-text img {
+  /* width: 80px; */
+  width: 140px;
+  filter: grayscale(50%);
+  opacity: 0.4;
+  margin: 0.1rem 2%;
+  transition: 0.6s;
+
+}
+article.get-text img:hover {
+  opacity: 0.8;
+}
+
+
+
+/*💎💎💎 Article - Get 설정 부분 💎💎💎*/
+article.get {
+  /* background: url('https://images.unsplash.com/photo-1500907789384-0c3b4c3bdce4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat; */
+  background: url("../img/unchar.png")no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  height: 500px;
+
+  color: #fff;
+}
+article.get > div {
+  float: right;
+  width: 50%;
+  height: 100%;
+  /* background: chartreuse; */
+  background: rgba(0,0,0, 0.6);
+
+  padding: 5rem 10%;
+  transition: 0.8s;
+  cursor: pointer;
+}
+article.get > div:hover {
+  background: rgba(0,0,0, 0.8);
+}
+
+/* 넘쳐나는 p 태그 text 부분 안보이게 설정 */
+article.get div div {
+  display: none;
+}
+
+
+
+/*💎💎💎 Article - Bespoke - TEXT 설정 부분 💎💎💎*/
+article.bespoke-text {
+  padding: 5rem 10%;
+  text-align: center;
+}
+/* article.bespoke-text p {
+  font-size: 20px !important;
+  line-height: 1.2em;
+} */
+
+
+
+
+/*💎💎💎 Article - Bespoke 설정 부분 💎💎💎*/
+article.bespoke h3{
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0 0 0;
+}
+article.bespoke section {
+  height: 500px;
+  /* background: coral; */
+}
+
+article.bespoke > :nth-child(1) {
+  /* background: url('https://images.unsplash.com/photo-1545912453-3d32e20f72bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80') no-repeat; */
+  background: url("../img/best04.png")no-repeat;
+  background-size: cover;
+  background-position: left center;
+  }
+  
+article.bespoke > :nth-child(2) {
+  /* background: url('https://images.unsplash.com/photo-1513207565459-d7f36bfa1222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80') no-repeat; */
+  background: url("../img/best01.png")no-repeat;
+  background-size: cover;
+  background-position: center center;
+  }
+  
+article.bespoke > :nth-child(3) {
+  /* background: url('https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat; */
+  background: url("../img/best02.png")no-repeat;
+  background-size: cover;
+  background-position: right center;
+  }
+
+article.bespoke section div {
+  position: relative;
+  background: rgba(0,0,0, 0.3);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  transition: 0.8s;
+}
+article.bespoke section div:hover {
+  background: rgba(0,0,0, 0.6);
+}
+
+article.bespoke section button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  color: #fff;
+  background: none;
+}
+article.bespoke section button:hover {
+  background: crimson;
+  color: #fff;
+}
+
+
+/*💭💭💭 버튼 후버시 애니메이션 다르게 설정해주기 - 추가코드 💭💭💭*/
+article.bespoke section button:hover {
+    background: rgba(0,0,0, 0.6);
+}
+
+
+
+
+
+/*💎💎💎 Article - Design - Text 설정 부분 💎💎💎
+*/
+article.design-text {
+    padding: 5rem 10%;
+    text-align: center;
+}
+article.design-text p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+
+
+/*💎💎💎 Article - Design 설정 부분 💎💎💎*/
+article.design section{
+  height: 200px;
+}
+
+article.design section div {
+  /* background: chartreuse; */
+
+  position: relative;
+
+  /* 배경 투명검정으로  */
+  background: rgba(0,0,0, 0.3);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.8s;
+}
+article.design section div:hover {
+  background: rgba(0,0,0, 0.6);
+}
+article.design section div:hover button {
+  background: crimson;
+  color: #fff;
+}
+
+/*🌀🌀🌀 버튼 부분 애니메이션 추가해주기 !!! 🌀🌀🌀 */
+article.design button {
+  position: absolute;
+  background: none;
+  color: #fff;
+    
+  /* 버튼 가운데로 위치 정렬 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article.design button:hover {
+  
+}
+
+
+/* 각각 section에 따로 이미지 설정 */
+article.design > :nth-child(1) {
+  /* background: url("https://images.unsplash.com/photo-1462804993656-fac4ff489837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")no-repeat; */
+  background: url("../img/year05.png")no-repeat;
+  background-size: cover;
+
+  /* 위아래부분은 top에  좌우로는 center로 지정 */
+  background-position: center center;
+}
+
+article.design > :nth-child(2) {
+  /* background: url("https://images.unsplash.com/photo-1438109491414-7198515b166b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")no-repeat; */
+  background: url("../img/year02.png")no-repeat;
+  background-size: cover;
+
+  /* 위아래부분은 top에  좌우로는 center로 지정 */
+  background-position: top center;
+}
+
+article.design > :nth-child(3) {
+  /* background: url("https://images.unsplash.com/photo-1567468219153-4b1dea5227ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")no-repeat; */
+  background: url("../img/year01.png")no-repeat;
+  background-size: cover;
+
+    /* 위아래부분은 center에  좌우로는 center로 지정 */
+  background-position: center center;
+}
+
+article.design > :nth-child(4) {
+  /* background: url("https://images.unsplash.com/photo-1560748526-881455a4e9b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")no-repeat; */
+  background: url("../img/year06.png")no-repeat;
+  background-size: cover;
+
+  /* 위아래부분은 top에  좌우로는 center로 지정 */
+  background-position: center center;
+}
+
+
+
+/*🌈🌈🌈 Article - Greetings 설정 부분 🌈🌈🌈*/
+article.greetings {
+  padding: 5rem 10%;
+  /* padding: 5rem 16%; */
+  text-align: center;
+  position: relative;
+}
+
+/* 화살표 오른쪽/왼쪽 설정 */
+article.greetings > :nth-child(1),
+article.greetings > :nth-child(2) {
+  /* background: red; */
+  position: absolute;
+  font-size: 2rem;
+
+  padding: 0.8rem;
+  top: 45%;
+  cursor: pointer;
+  transition: 0.6s;
+  border-radius: 50%;
+}
+article.greetings > :nth-child(1):hover,
+article.greetings > :nth-child(2):hover {
+  background: crimson;
+  color: #fff;
+}
+
+article.greetings > :nth-child(1) {
+  left: 10%;
+  top: 50%;
+}
+
+article.greetings > :nth-child(2) {
+  right: 10%;
+  top: 50%;
+}
+
+article.greetings img {
+  width: 80px;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transition: 0.8s;
+  margin: 0.1rem 2%;
+}
+article.greetings img:hover {
+  opacity: 1;
+}
+
+
+
+/*🌈🌈🌈 Article - Event 설정 부분 🌈🌈🌈*/
+article.event {
+  display: none;
+}
+
+
+
+
+
+/*🌈🌈🌈 Footer 설정 부분 🌈🌈🌈*/
+footer {
+  padding: 5rem 10%;
+  background: #222;
+}
+footer h2 {
+  color: #aaa;
+  font-style: italic;
+}
+footer form div {
+  padding: 0.5rem 0;
+}
+footer form label {
+  display: block;
+  line-height: 2.4rem;
+}
+footer form input {
+  width: 340px;
+  padding: 0.6rem;
+}
+footer form textarea {
+  width: 340px;
+  height: 6rem;
+  padding: 0.6rem;
+}
+footer form button {
+  width: 240px;
+}
+
+
+
+/*🌈🌈🌈 Address 설정 부분 🌈🌈🌈*/
+address {
+  padding: 5rem 10%;
+  background: #333;
+}
+address h2 {
+  color: #aaa;
+}
+
+
+

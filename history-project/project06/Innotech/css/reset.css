@@ -1,0 +1,15 @@
+*{ padding: 0; margin: 0; font-family:'Noto Sans KR','Nanum Gothic',monospace; box-sizing:border-box; } 
+body { overflow-x:hidden; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+a:visted, a:link, a:active { color:#333;  }
+img{ border: none; max-width:100%; }
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+label.away{ position: absolute; left: -999em; }
+input[type=button], input[type=submit], input[type=reset],input[type=image],button, select{cursor:pointer; outline:none;}
+
+
+.main_nav li a { font-family: 'Play', sans-serif; color:#fff; }

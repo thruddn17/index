@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 소개 블로그 느낌의 사이트</title>
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Noto+Sans|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="./css/project1.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <script src="./js/jquery.min_1.12.4.js"></script>
+    <script src="./script/jquery.fittext.js"></script>
+</head>
+<body>
+
+    <!-- Header 작성 부분 -->
+    <header id="header">
+        <div class="logo">
+            <!-- 제주도 로고 이미지로 바꾸기 -->
+            <!-- <img src="https://image.ibb.co/fKZWMK/Portugal_Landing_Page.png" alt="Jeju logo" id="idheader--img"> -->
+            <img id="header--img" src="https://www.jeju.go.kr/files/editor/913124eb-5943-47e7-8fdb-7c2d3eea6c50.jpg" alt="">
+        </div>
+        <nav id="nav--bar">
+            <ul id="ul--navbar">
+                <li><a href="#about" class="nav--link">About</a></li>
+                <li><a href="#territories" class="nav--link">Territories</a></li>
+                <li><a href="#destinations" class="nav--link">Destinations</a></li>
+                <li><a href="#newsletter" class="nav--link">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--// Header 작성 부분 -->
+
+    <!-- Main부분 -->
+    <main id="main--doc">
+        <h1 class="title" id="fittext3">
+            <span>J</span>
+            <span>E</span>
+            <span>J</span>
+            <span>U</span>
+            <span>D</span>
+            <span>O</span>
+        </h1>
+        <!-- <h1 id="title">Jejudo</h1> -->
+
+        <!--Section - About 부분 -->
+        <section class="main--section" id="about">
+            <header class="section--title">About</header>
+            <article>
+                <p id="about-pt">제주도는 세계적으로도 유명한 화산섬이다. 화산 활동으로 생긴 기생 화산인 오름, 주상 절리, 용암 동굴, 현무암지대 등은 제주도의 지형적 특징을 잘 보여 준다.</p>
+                <p id="about-pt">기생화산은 큰 화산 옆에 붙어 있는 작은 화산을 말하며, 한라산의 기생화산은 작은 산을 의미하는 제주 방언인 '오름'이라고도 한다. 용암 동굴은 용암이 분출하면서 생긴 것으로 만장굴 등이 있다.
+                </p>
+                <p id="about-pt">현무암지대는 물이 땅속으로 잘 스며들어 하천이 발달하기 어렵다. 그래서 마을은 해안을 중심으로, 특히 물이 솟아나는 용천대를 중심으로 발달해 왔다.
+                </p>
+                <p id="about-pt">Come and discover the charms of this island too.</p>
+
+                <div class="box--shadow">
+                    
+                    <div id="pt--summary">
+                        <ul id="ul--summary">
+                            <li class="li--summary">
+                                <div class="bullet--image" id="history"></div>
+                                <h2 class="bullet--text">Great History</h2>
+                            </li>
+                            <li class="li--summary">
+                                <div class="bullet--image" id="beaches"></div>
+                                <h2 class="bullet--text">Amazing beaches</h2>
+                            </li>
+                            <li class="li--summary">
+                                <div class="bullet--image" id="food"></div>
+                                <h2 class="bullet--text">Delicious food</h2>
+                            </li>
+                        </ul>
+                        <div id="trailer">
+                            <iframe id="video" src="https://www.youtube.com/embed/YfY7AqC3FnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </article>
+        </section>
+        <!--// Section - About 부분 -->
+
+        <!--Section - Territories 부분 -->
+        <section class="main--section" id="territories">
+            <header class="section--title">Specialty</header>
+            <article>
+                <div class="terr--all">
+                    <div class="terr--each">
+                        <div class="terr--image" id="pt--continental"></div>
+                        <h3 class="terr--title">감귤</h3>
+                        <p class="terr--description">
+                          우리 몸의 필수 비타민 공급원인 과일들이 먹기에 불편한 점이 있는데 반해 제주감귤은 씨가 없으며 손으로 껍질을 벗기기가 쉽고, 비타민C, 단백질, 당질, 칼슘, 인, 비타민 등 다양한 영양소가 듬뿍 들어 있어 세계적으로 훌륭한 과일로 꼽힌다.
+                        </p>
+                        <button id="visit" type="button">Visit</button>
+                    </div>
+
+                    <div class="terr--each">
+                        <div class="terr--image" id="pt--madeira"></div>
+                        <h3 class="terr--title">흑돼지</h3>
+                        <p class="terr--description">
+                          전통적으로 우리나라에서 사육된 재래돼지는 검은색인데 제주흑돼지도 다른 재래돼지와 마찬가지로 몸 전체가 빛이 나는 검은 색의 털로 덮여있으며 얼굴이 좁고 주둥이가 길다. 귀는 작으며 접혀있지 않고 위로 솟아 있다.                          
+                        </p>
+                        <button id="visit" type="button">Visit</button>
+                    </div>
+
+                    <div class="terr--each">
+                        <div class="terr--image" id="pt--azores"></div>
+                        <h3 class="terr--title">땅콩</h3>
+                        <p class="terr--description">
+                          짜장면은 한 종류로만 존재하다 시간이 흐르면서 간짜장, 쟁반짜장, 해물짜장, 유니짜장은 물론 국수가 아닌 밥과 함께 먹는 짜장밥 등의 모습으로 다양하게 발전하였다. 간짜장은 일반 짜장면과 다르다.
+                        </p>
+                        <button id="visit" type="button">Visit</button>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+        <!--// Section - Territories 부분 -->
+
+        <!-- Section - Destinations 부분 -->
+        <section class="main--section" id="destinations">
+            <header class="section--title">Attractions</header>
+            <article>
+                <!-- dest - all 부분 -->
+                <div class="dest--all">
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju01">
+                            <h3 class="dest--title">한라산</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju02">
+                            <h3 class="dest--title">천지연폭포</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju03">
+                            <h3 class="dest--title">새별오름</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju04">
+                            <h3 class="dest--title">주상절리대</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju05">
+                            <h3 class="dest--title">섭지코지</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju06">
+                            <h3 class="dest--title">용두암</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju07">
+                            <h3 class="dest--title">산방산</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju08">
+                            <h3 class="dest--title">외돌개</h3>
+                        </div>
+                    </div>
+
+                    <div class="dest--each">
+                        <div class="dest--image" id="jeju09">
+                            <h3 class="dest--title">돌문화공원</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--// dest - all 부분 -->
+            </article>
+        </section>
+        <!--// Section - Destinations 부분 -->
+
+        <!-- Main-section의 Newletter 부분 -->
+        <section class="main--section" id="newsletter">
+            <header class="section--title">Newsletter</header>
+            <form id="form" action="">
+                <label id="email-label" for="email">Plan your trip!</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+
+                <!-- 비행기 제출버튼 -->
+                <input type="submit" id="submit" value="&#9992;">
+            </form>
+        </section>
+        <!--// Main-section의 Newletter 부분 -->
+
+    </main>
+    <!--// Main부분 -->
+
+    <!-- 마지막 FOOTER 설정부분 -->
+    <footer>
+        <div id="contact">
+            Product Landing Page for FreeCodeCamp Responsive Web Design Certification<br>
+            <a id="credits"  href="#">Layout</a> | Made with by 
+            <a id="dev-contact"  href="#">So Gyeong Woo</a>
+        </div>
+    </footer>
+    <!--// 마지막 FOOTER 설정부분 -->
+</body>
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS 설정 부분 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap"> 
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="http://innotechm.cafe24.com/js/swiper/swiper.min.css"> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <!--/// CSS 설정 부분 -->
+
+
+  
+  <!-- JS 설정 부분 -->
+  <script src="./js/jquery-latest.min.js"></script>
+  <!-- <script src="http://innotechm.cafe24.com/js/jquery-latest.min.js"></script> -->
+  <script src="./js/swiper.min.js"></script>
+  <!-- <script src="http://innotechm.cafe24.com/js/swiper/swiper.min.js"></script> -->
+  <script src="http://innotechm.cafe24.com/js/bx/jquery.bxslider.min.js"></script>
+  <script src="./js/common.js" defer></script>
+  <!--/// JS 설정 부분 -->
+</head>
+<body>
+
+  <!-- MAIN- head_wrap 부분 설정 ===> 이부분이 main-header 부분임!!!-->
+  <div class="head_wrap">
+    <div class="wrap">
+      <h1 class="logo">
+        <a href="">
+          <img src="./img/h_logo_new.png" alt="">
+        </a>
+      </h1>
+
+      <!-- NAV_BOX 부분 설정 -->
+      <div class="nav_box">
+        <a href="#!" class="nav_btn">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </a>
+
+        <ul>
+          <li><a href="">COMPANY</a></li>
+          <li><a href="">WORK</a></li>
+          <li><a href="">NEWS</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/// MAIN- head_wrap 부분 설정 끝 ///-->
+
+
+  <!-- Main_set 설정 부분 -->
+  <div class="main_set">
+    <div class="section_set swiper-container">
+
+      <!-- 이미지 슬라이드 본체 작성 부분 -->
+      <ul class="swiper-wrapper">
+        <!-- 슬라이드 1번 내용 -->
+        <li class="hea1 swiper-slide">
+          <div class="main_overlay"></div>
+          <div class="text_box">
+            <div class="text_inner">
+              <p>기술과 미디어를 더해, <br>경험의 혁신을 만들어갑니다.</p>
+              <p class="light">BUILD WITH US, INNOTECHMEDIA</p>
+              <a href="#!" class="play play1">PLAY VIDEO</a>
+            </div>
+          </div>
+
+          <!-- 메인 큰 Swiper 부분 이미지 설정 -->
+          <div class="img_box">
+            <img src="./img/237242589_1f91ca4b_main01-1.jpg" alt="">
+          </div>
+          <!--// 메인 큰 Swiper 부분 이미지 설정 //-->
+        </li>
+
+        <!-- 슬라이드 2번 내용 -->
+        <li class="hea2 swiper-slide">
+          <div class="main_overlay"></div>
+          <div class="text_box">
+            <div class="text_inner">
+              <p>사운드 라이브러리, 독립선언! <br> 대한민국의 독특한 사운드 라이브러리</p>
+              <p class="light">K-Sound Library 사업</p>
+              <a href="#!" class="play play2">PLAY VIDEO</a>
+            </div>
+          </div>
+
+          <div class="img_box">
+            <img src="./img/237242589_cb850d55_main02-1.jpg" alt="">
+          </div>
+        </li>
+
+        <!-- 슬라이드 3번 내용 -->
+        <li class="hea3 swiper-slide">
+          <div class="main_overlay"></div>
+          <div class="text_box">
+            <div class="text_inner">
+              <p>빛과 인터렉티브 기술을 더해,<br>새로운 시공간을 만들다!</p>
+              <p class="light">Vivaldi Forest</p>
+              <a href="#!" class="play play3">PLAY VIDEO</a>
+            </div>
+          </div>
+
+          <div class="img_box">
+            <img src="./img/237242589_96c387df_main03-01.jpg" alt="">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Swiper 부분 페이지 이동 설정 -->
+      <div class="swiper-pagination swiper-pagination-bullets">
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+      </div>
+
+      <span class="swiper-notification"></span>
+      <!--// Swiper 부분 페이지 이동 설정 //-->
+    </div>
+  </div>
+  <!--// Main_set 설정 부분 끝!!! //-->
+
+
+  <div class="layer_wrap main_vid1 vid" style="display: none;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="video_pop">
+          <div class="video_title">
+            INNOTECHMEDIA
+            <a href="#!" class="popClose"><img src="./img/close_gray_thin.png" alt=""></a>
+          </div>
+
+          <div class="iframe_wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BecoNMGdm98" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="layer_wrap main_vid2 vid" style="display: none;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="video_pop">
+          <div class="video_title">
+            INNOTECHMEDIA
+            <a href="#!" class="popClose"><img src="./img/close_gray_thin.png"></a>
+          </div>
+          <div class="iframe_wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fvf2USZqjeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer_wrap main_vid3 vid" style="display: none;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="video_pop">
+          <div class="video_title">
+            INNOTECHMEDIA
+            <a href="#!" class="popClose"><img src="./img/close_gray_thin.png"></a>
+          </div>
+          <div class="iframe_wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BecoNMGdm98" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 2번페이지 - Main_intro 부분 설정 -->
+  <div id="main_intro" class="main_intro">
+    <div class="wrap">
+      <div class="left">
+        <div class="inner">
+          <h2>
+            <span>BUILD WITH US,</span>
+            INNOTECHMEDIA
+          </h2>
+          <p class="paragraph">
+            우리는 일상을 살아가는 사람들의 마음을 사로잡을 수 있는<br>
+            모험 같은 콘텐츠를 만드는 여행을 하고 있습니다.<br>
+            우리는 기꺼이 그러한 여정의 선장이 될 것이며, <br>
+            현실을 초월한 몰입감 넘치는 미디어의 세계를 <br>
+            찾아 오늘도 모험을 멈추지 않을 것이다.
+          </p>
+          <p class="hash">
+            <span>#모험같은콘텐츠</span>
+            <span>#현실을넘어선몰입의세상</span>
+            <span>#멈추지않는모험</span>
+          </p>
+
+          <!-- 양식 다운로드 버튼 부분 설정 -->
+          <div class="download">
+            <a href="" download="">Company profile(EN)<span class="ico"></span></a>
+            <a href="" download="">Company profile(KR)<span class="ico"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 부분 비디오 설정 -->
+      <div class="right">
+        <video  muted="" autoplay="" loop="" playsinline="" id="iVideo">
+          <source src="./video/inno_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <!--// 2번페이지 - Main_intro 부분 설정 //-->
+
+
+
+
+  <!-- 3번 페이지 - Main_work 부분 설정 -->
+  <div class="main_work">
+    <div class="wrap">
+      <div class="top">
+        <span class="lighter">우리는 무엇을 만들고, </span>
+        <span>우리는 무엇을 추구하고, 무엇에 열광할까요?</span>
+      </div>
+
+      <!-- 비디오 리스트 설정 시작 부분 -->
+      <div class="video_box">
+
+        <!-- 비디오 리스트 부분 각가 설정 -->
+        <ul class="work_thumbs">
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb1">
+              <div class="overlay"></div>
+
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">전북해양안전체험관</p>
+              </div>
+
+              <div class="img_wrap">
+                <div class="img_box">
+                  <img src="./img/237242589_flI5ytbg_subma.jpg" alt="">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb2">
+              <div class="overlay"></div>
+
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+              
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">바다로 탈출하라</p>
+              </div>
+
+              <div class="img_wrap">
+                <div class="img_box">
+                  <img src="./img/237242589_IQ3iBxab_ani.jpg" alt="">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb3">
+              <div class="overlay"></div>
+
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">K-SOUND library 자동차 편</p>
+              </div>
+
+              <div class="img_wrap">
+                <div class="imb_box">
+                  <img src="./img/3667027726_dGDuBANy_03.jpg" alt="">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb4">
+              <div class="overlay"></div>
+              
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+              
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">VR ICARUS_VR paragliding</p>
+              </div>
+              
+              <div class="img_wrap">
+                <div class="img_box">
+                  <img src="./img/237242589_0Zxiqd3V_icarus.jpg">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb5">
+              <div class="overlay"></div>
+
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+              
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">VIVALDI FOREST</p>
+              </div>
+
+              <div class="img_wrap">
+                <div class="img_box">
+                  <img src="./img/237242589_5rPYzJ7x_vi01.jpg">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="#!" class="openPop" id="thumb6">
+              <div class="overlay"></div>
+              
+              <div class="overlay_title">
+                <h4>PLACE</h4>
+              </div>
+              
+              <div class="text">
+                <i class="xi-play-circle"></i>
+                <p class="subject">SKETCH WALL</p>
+                <!-- <p class="year"></p> -->
+              </div>
+              
+              <div class="img_wrap">
+                <div class="img_box">
+                  <img src="./img/3667027726_V63buEO8_06.jpg">
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!--// 비디오 리스트 부분 각가 설정  끝!!!! ////-->
+
+
+        <!-- 여기서부터 비디오클릭시 레이어 팝업창 설정 부분!!!! -->
+        <div class="video_wrap popup" style="display: none;">
+          <div class="inner">
+            <div class="video_pop video_thumb1">
+              <div class="video_title">
+                전북해양안전체험관
+                <a href="#!" class="popClose">
+                  <img src="./img/close_gray_thin.png" alt="">
+                </a>
+              </div>
+
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/HGvWdbZrAKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+
+              <div class="video_desc">
+                <p class="title">Year : 2020<br>
+                  Location : 전북 부안(전북학생해양수련원)<br>
+                  Client : 전북교육청 / 엑스오비스<br>
+                  Role : 2D/3D/4D Animation, SW<br>
+                  전북학생해양수련원 내 조성된 해양안전사고에 특화된 안전체험관으로서 모형, 시뮬레이터와 연동된 다양한 안전체험이 가능하다.
+                </p>
+              </div>
+            </div>
+
+            <div class="video_pop video_thumb2">
+              <div class="video_title">
+                바다로 탈출하라
+                <a href="#!" class="popClose">
+                  <img src="./img/close_gray_thin.png" alt="">
+                </a>
+              </div>
+
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/Lhvgw35O928" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+
+              <div class="video_desc">
+                <p class="title">Year : 2020<br>
+                  Location : 전북 부안(전북학생해양수련원)<br>
+                  Client : 전북교육청 / 엑스오비스<br>
+                  Role : 4D Animation<br>
+                  전북해영안전체험관 4D 영상관에 설치된 영상으로써 급격한 날씨 변화에 침몰된 선박에서 메뉴얼에 따라 안전하게 탈출하는 내용을 한 가족의 시선으로 담고 있다.
+                </p>
+              </div>
+            </div>
+
+            <div class="video_pop video_thumb3">
+              <div class="video_title">
+                K-SOUND library 자동차 편						
+                <a href="#!" class="popClose">
+                  <img src="../img/close_gray_thin.png">
+                </a>
+              </div>
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/fvf2USZqjeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <div class="video_desc">
+                <p class="title">Year : 2020<br>
+                  Location : 전국<br>
+                  Client : 문화체육관광부 / 전주시 / 전주정보문화산업진흥원<br>
+                  Role : 라이브러리 녹음, 웹페이지 제작<br>
+                  K-SOUND Library 사업은 사운드라이브러리의 국산화를 위한 국가사업으로서  이노테크미디어가 2020년 그 시작을 함께하였습니다.<br>
+                  자동차음원을 녹음하기 위한 여정을 소개합니다.
+                </p>						 
+              </div>
+            </div>
+
+            <div class="video_pop video_thumb4">
+              <div class="video_title">
+                VR ICARUS_VR paragliding						
+                <a href="#!" class="popClose">
+                  <img src="../img/close_gray_thin.png">
+                </a>
+              </div>
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/7S74rucE7BY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <div class="video_desc">
+                <p class="title">Year : 2020<br>
+                  Location : 경북 문경<br>
+                  Client : 문경시<br>
+                  Role : Interactive Media, SW<br>
+                  <br>
+                  문경에코랄라에 추가적으로 크로마키 촬영/합성/편집 프로그램 및 애니런 등의 체험존을 조성하여 흥미를 제고하였다.
+                </p>
+              </div>
+            </div>
+
+            <div class="video_pop video_thumb5">
+              <div class="video_title">
+                VIVALDI FOREST						
+                <a href="#!" class="popClose">
+                  <img src="../img/close_gray_thin.png">
+                </a>
+              </div>
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/BecoNMGdm98" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <div class="video_desc">
+                <p class="title">대명비발디파크의 산책길을 활용해 조성된 야간/야외 디지털테마파크로서 <br>
+                  상설쇼로 진행되는 마운틴파사드쇼 '호접몽'의 확장된 세계관으로 주인공 '아이'가 되어 산신 호랑이를 만나고 헤어지는 찰나의 순간을 경험하게 된다.
+                </p>
+              </div>
+            </div>
+
+            <div class="video_pop video_thumb6">
+              <div class="video_title">
+                SKETCH WALL						
+                <a href="#!" class="popClose">
+                  <img src="../img/close_gray_thin.png">
+                </a>
+              </div>
+              <div class="iframe_wrap">
+                <iframe id="player_c" width="560" height="315" src="https://www.youtube.com/embed/UqqS35v6Ts4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <div class="video_desc">
+                <p class="title">
+                  원하는 도면의 그림을 그리고 스캔하면 해당 캐릭터가 살아나 움직이고, 이를 터치하면 반응하는 인터렉티브 미디어 콘텐츠
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// 여기서부터 비디오클릭시 레이어 팝업창 설정 부분!!!! //-->
+
+        <!-- 더보기 버튼 부분 설정 -->
+        <div class="btn_wrap">
+          <a href="work.html" class="btn_txt">
+            <span>+</span>더보기
+          </a>
+        </div>
+        <!--// 더보기 버튼 부분 설정 //-->
+
+      </div>
+      <!-- 비디오 리스트 설정 끝 부분 -->
+    </div>
+  </div>
+  <!--// 3번 페이지 - Main_work 부분 설정 //-->
+
+
+  <!-- 4번 페이지 - Main_News 부분 설정 -->
+  <div id="main_news" class="main_news">
+    <div class="wrap">
+      <div class="news_wrap">
+        <div class="news_box swiper-container">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide">
+              <li>
+                <a href="#!" id="news1">
+                  <p class="date">2020.12.03</p>
+                  <p class="subject">이노테크미디어 2020년 한국형영화음원 구축 사업 완료</p>
+                  <!-- <p class="content"></p> -->
+                  <p class="content">
+                    인천시는 30일 코로나19로 인한 어려운 경제여건에서도 일자리 창출과 고용안정에 기여한 24개 중소기업을  .								
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#!" id="news2">
+                  <p class="date">2020.11.21</p>
+                  <p class="subject">이노테크미디어, 인천시, 일자리창출 우수기업에 '24개 중소기업' 선정</p>
+                  <p class="content">
+                    인천시는 30일 코로나19로 인한 어려운 경제여건에서도 일자리 창출과 고용안정에 기여한 24개 중소기업을  .								
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#!" id="news3">
+                  <p class="date">2020.11.21</p>
+                  <p class="subject">이노테크미디어 홈페이지가 새롭게 개편 되었습니다.</p>
+                  <p class="content">
+                    이노테크미디어 홈페이지가 새롭게 개편 되었습니다.								
+                  </p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="swiper-slide swiper-slide-next"></ul>
+
+          </div>
+
+          <div class="swiper_btn_wrap">
+            <div class="slide_counter">
+              <span id="currentSlide">1</span> / <span id="totalSlide">2</span>
+            </div>
+
+            <div class="slide_btn">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <span class="swiper-notification"></span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/// 4번 페이지 - Main_News 부분 설정 ///-->
+
+  <!-- 뉴스 리스트 각각 클릭시 레이어 팝업 부분 설정!! -->
+  <div class="layer_wrap board news1" style="display: none;">
+    <div class="wrap">
+      <div class="board_view">
+
+        <div class="top">
+          <a href="#!" class="pop_close"></a>
+          <p class="subject">이노테크미디어 2020년 한국형영화음원 구축 사업 완료</p>
+          <p class="date">2020.12.03 07:09:47</p>
+        </div>
+
+        <div class="board_con">
+          <p>이노테크미디어 2020년 한국형영화음원 구축 사업 완료</p>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>* 효과음원 카테고리 분류체계(K-Sound Library, 2014)에 따른 효과음원(효과음, 공간음) 개발 <br>&nbsp;&nbsp; <br>* 개발 효과음원은 아래와 같은 속성을 준수하여 3종류의 포맷 (5.1/5.0 &amp; Stereo &amp; Mono)으로 <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; 최종 제공 <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; 1) AmbiX/ FUMA 의 속성을 지닌 3D 음원파일 <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; 2) 192KHz –32bit floating Point PCM Non Compression <br>&nbsp;&nbsp; <br>* 녹음원본의 음원은 위의 제원을 유지할 수 있는 파이프라인의 후반시설에서 편집 및 마스터링 수행&nbsp; <br>&nbsp;&nbsp; <br>* 추후 이용자의 편의를 제공하기 위한 메타데이터 제작 <br>&nbsp;&nbsp;&nbsp;&nbsp; </div>
+          <p></p>
+        </div>
+
+        <div class="board_btn">
+          <a href="#!">이전글</a>
+          <a href="#!">다음글</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer_wrap board news2" style="display: none;">
+    <div class="wrap">
+      <div class="board_view">
+        
+        <div class="top">
+          <a href="#!" class="pop_close"></a>
+          <p class="subject">이노테크미디어, 인천시, 일자리창출 우수기업에 '24개 중소기업' 선정</p>
+          <p class="date">2020.11.21 21:54:08</p>
+        </div>
+
+        <div class="board_con">
+          <div id="copy_text">인천시는 30일 코로나19로 인한 어려운 경제여건에서도 일자리 창출과 고용안정에 기여한 24개 중소기업을 ‘2020년 일자리창출 우수기업’으로 인증하고, 인증서 및 현판 수여·경영안정자금 우대 지원 등 다양한 혜택을 지원한다고 밝혔다.<br><br>출처 : 중소기업뉴스(http://news.kbiz.or.kr)<br></div>
+        </div>
+  
+        <div class="board_btn">
+          <a href="#!">이전글</a>
+          <a href="#!">다음글</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer_wrap board news3" style="display: none;">
+    <div class="wrap">
+      <div class="board_view">
+        
+        <div class="top">
+          <a href="#!" class="pop_close"></a>
+          <p class="subject">이노테크미디어 홈페이지가 새롭게 개편 되었습니다.</p>
+          <p class="date">2020.11.21 21:42:31</p>
+        </div>
+
+        <div class="board_con">
+          이노테크미디어 홈페이지가 새롭게 개편 되었습니다.
+        </div>
+  
+        <div class="board_btn">
+          <a href="#!">이전글</a>
+          <a href="#!">다음글</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 푸터 부분의 CONTACT 텍스트 클릭시 나타나는 레이어 팝업 부분 설정!!! -->
+  <div class="layer_wrap contact" style="display: none;">
+    <div class="wrap">
+      <div class="top">
+        <a href="#!" class="pop_close"></a>
+        <h3>CONTACT</h3>
+      </div>
+
+      <form action="" id="bbs_form2" name="bbs_form2" method="post" >
+        <input type="hidden" name="newwork" value="insert">
+        <input type="hidden" name="bo_table" value="bd_02">
+        <input type="hidden" name="open_yn" value="Y">
+        <input type="hidden" name="noticeyn" value="N">
+        <input type="hidden" name="ishtml" value="B">
+
+        <!-- 본체 부분 -->
+        <div class="form_wrap">
+          <!-- 왼쪽 영역 부분 - left -->
+          <div class="left">
+            <ul>
+              <li>
+                <div class="input_wrap">
+                  <p>이름</p>
+                  <input type="text" name="name" id="name">
+                </div>
+
+                <div class="input_wrap">
+                  <p>회사명</p>
+                  <input type="text" name="add_value1" id="add_value1">
+                </div>
+              </li>
+
+              <li>
+                <p>이메일</p>
+                <input type="text" name="email" id="email">
+              </li>
+
+              <li>
+                <p>이용약관</p>
+                <div class="terms">
+                  개인 정보 수집 및 이용 동의 <br>
+                    ㆍ수집항목 : 이름, 이메일 주소 <br>
+                    ㆍ수집목적 : 서비스 이용에 따른 불만처리, 오류 해결 등 민원 처리 및 결과 회신 시 사용 <br>
+                    ㆍ보유 및 이용기간 : 3년 보관 후 파기 <br>
+                    그 외 사항은  개인정보 처리방침을 준수합니다.
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <!-- 왼쪽 영역 부분 - left 끝!!!-->
+
+          <!-- 오른쪽 영역 부분 right == "제목" + "내용" 부분임 -->
+          <div class="right">
+            <ul>
+              <li class="required">
+                <p>제목 <span>*</span></p>
+                <input type="text" name="title" id="title">
+              </li>
+              <li class="required">
+                <p>내용 <span>*</span></p>
+                <textarea name="f_content" id="f_content"></textarea>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 개인정보수집 체크 부분 설정!! -->
+          <div class="agree_box">
+            <input type="checkbox" id="agree" name="yn_use" value="Y">
+            <label for="agree" class="chk"><span class="chk_mark"></span> 개인정보수집 및 이용에 동의합니다.</label>
+          </div>
+          <!--// 개인정보수집 체크 부분 설정!! //-->
+
+          <!--// 오른쪽 영역 부분 right 끝!!! //-->
+        </div>
+
+        <!-- 문의하기 버튼 부분 설정!! -->
+        <div class="contact_btn">
+          <button type="button">문의하기</button>
+        </div>
+        <!--// 문의하기 버튼 부분 설정!! //-->
+
+        <input type="hidden" name="refURI" id="refURI" value="/">
+
+      </form>
+    </div>
+  </div>
+  <!--/// 푸터 부분의 CONTACT 텍스트 클릭시 나타나는 레이어 팝업 부분 설정!!! ///-->
+
+
+  
+
+  <!-- 오시는길 부분 설정  -->
+  <div class="layer_wrap map_layer map_layer1" style="display: none;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="map_title">
+          오시는 길
+          <a href="#!" class="popClose">
+            <img src="./img/close_gray_thin.png" alt="">
+          </a>
+        </div>
+
+        <div class="map_wrap">
+          <div class="map_box">
+            <div class="left">
+              <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d791.1541207341262!2d126.71952536917254!3d37.51696264323106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7dbed9b462b3%3A0x92c7bb03f732e950!2z7Jqw66a865287J207Jio7Iqk67C466as!5e0!3m2!1sko!2skr!4v1612258497975!5m2!1sko!2skr" width="800" height="900" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+            </div>
+
+            <div class="right">
+              <div class="text_box">
+                <p class="branch_nm">인천본사<span class="ico"></span></p>
+                <p class="branch_addr">
+                  인천본사인천광역시 부평구 부평대로 283<br> 우림라이온스밸리 B동 406호
+                </p>
+                <p class="tel"><b>TEL :</b> +82-32-515-8033</p>
+                <p class="tel"><b>FAX :</b> +82-32-513-8033</p>
+                <p class="tel"><b>Email :</b> joshua@innotechmedia.co.kr</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer_wrap map_layer map_layer2" style="display: none;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="map_title">
+          오시는 길
+          <a href="#!" class="popClose">
+            <img src="./img/close_gray_thin.png"></a>
+        </div>
+  
+        <div class="map_wrap">
+          <div class="map_box">
+            <div class="left">
+              <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.2389628654887!2d126.87940381523312!3d37.47868693691223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61e3a9ebfbc9%3A0xe91dfb691d40350f!2z7Iug7ZWc7J2064W47ZSM66CJ7Iqk!5e0!3m2!1sko!2skr!4v1612258347816!5m2!1sko!2skr" width="100%" height="900" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+            </div>
+            <div class="right">
+              <div class="text_box">
+                <p class="branch_nm">서울 개발제작연구소<span class="ico"></span></p>
+                <p class="branch_addr">
+                  서울특별시 금천구 가산디지털1로 149 신한 이노플렉스 6층 
+                </p>
+                <p class="tel"><b>TEL :</b> +82-02-6111-0033</p>
+                <p class="tel"><b>FAX :</b> +82-02-6111-0055</p>
+                <p class="tel"><b>Email :</b> innotech72@hanmail.net</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// 오시는길 부분 설정  //-->
+
+
+  <!-- TOtop 버튼 부분 설정 -->
+  <a href="#" class="toTop"></a>
+
+
+
+  <!-- Footer 설정 부분 ==== 푸터푸터푸터 !!!!-->
+  <footer>
+    <div class="f_wrap">
+      <div class="inner">
+        <div class="top">
+          <div class="f_logo">
+            <img src="./img/f_logo_new.png" alt="">
+          </div>
+          
+          <div class="f_sns">
+            <ul>
+              <li>
+                <a href="#!" class="contact_open">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+          <a href="https://www.youtube.com/channel/UC7S4equQpn7FdUTv-duwKUA" target="_blank" class="youtube">youtube</a>
+        </div>
+
+        <div class="f_line">
+          <span>(주)이노테크미디어</span>
+          <span>사업자 등록번호 : 204-86-08699</span>
+        </div>
+
+        <div class="f_block">
+          <div class="f_line">
+            <p class="title">해외문의 (Overseas Inquiry Only)</p>
+            <span class="title" style="line-height: 30px;">인천본사</span>
+            <span class="address1">인천광역시 부평구 부평대로 283 우림라이온스밸리 B동 406호 
+              <a href="#!">
+                <img src="./img/map_ico.png" class="ico" alt="">
+              </a>
+            </span>
+
+            <div class="contact_list">
+              <span>TEL : +82-32-515-8033</span>
+              <span>FAX :  +82-32-513-8033</span>
+              <span>Email : joshua@innotechmedia.co.kr</span>
+            </div>
+          </div>
+
+          <div class="f_line">
+            <p class="title">국내문의</p>
+            <span class="title" style="line-height: 30px;">서울 개발제작연구소</span>
+            <span class="address2">서울특별시 금천구 가산디지털1로 149 신한 이노플렉스 6층 
+              <a href="#!">
+                <img src="./img/map_ico.png" class="ico">
+              </a>
+            </span>
+
+            <div class="contact_list">
+              <span>TEL :  +82-02-6111-0033</span>
+              <span>FAX :  +82-02-6111-0055</span>
+              <span>Email : innotech72@hanmail.net</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- copyright 저작권 설정 부분 -->
+        <p class="copy">
+          Copyright 2020 INNOTECHMEDIA. All Rights Reserved.
+        </p>
+        <!--// copyright 저작권 설정 부분 //-->
+
+      </div>
+    </div>
+  </footer>
+  <!--// Footer 설정 부분 //-->
+
+
+</body>
+</html>

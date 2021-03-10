@@ -1,0 +1,227 @@
+/* Tablet 사이즈 버전 */
+@media screen and (max-width: 1024px) {
+  header.section .inner {
+    max-width: none; /*초기화*/
+    height: auto;
+    padding: 0px 20px;
+  }
+
+  header .menu-group,
+  header .sign-group {
+    float: none;
+  }
+
+  
+  header .menu-group {
+    /* 로고이미지 다음으로 1줄정렬되도록 */
+    display: block;
+  }
+
+  header .logo {
+    padding: 12px 0px;
+  }
+  header .main-menu {
+    display: block; /*flex에서 block으로!!*/
+    margin-bottom: 10px;
+  }
+  header .main-menu li {
+    border-top: 1px solid #e5e5e5;
+  }
+  header .main-menu li a {
+    padding: 16px 0px;
+  }
+  
+
+  /* 토글 클래스 설정 */
+  header .toggle {
+    display: none;
+  }
+  header .toggle.on {
+    display: block;
+  }
+
+  /* 반응형 사이즈 조건시 나타나도록 설정 */
+  #toggle-btn {
+    display: block;
+  }
+
+
+
+  /* sign-group 부분 설정 */
+  header .sign-group {
+    /* display: block;  */
+    /*flex에서 block으로 설정!*/
+
+    padding: 10px 0 20px;/*위/아래만 설정 좌우는 x*/
+  }
+
+
+  header .btn-group {
+    display: block;
+  }
+  header .btn-group .btn {
+    /*안에있는 글자 가운데 정렬 - 수평 가운데 정렬!!*/
+    justify-content: center;
+  }
+  header .btn-group .sign-in {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  
+
+  #search-form {
+    margin-top: 12px;
+    margin-right: 0;
+  }
+  #search {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+  }
+  
+
+  /* seacrh-form 부분에 있는 sub-menu 부분 작성!! */
+  header .sub-menu {
+    margin-top: 12px;
+    margin-right: 0;
+
+    /* 수평 가운데 정렬 */
+    justify-content: center;
+  }
+
+
+
+
+  /* visual 부분 설정 */
+  .section--visual {
+    background: url("../img/bg-small.jpg")no-repeat bottom left;
+    background-size: cover;
+  }
+  .section--visual .inner {
+    display: block; /*flex를 다시 block으로!!*/
+    max-width: none;
+    padding: 80px 20px;
+  }
+
+  .section--visual .summary {
+    text-align: center;
+    margin-right: 0; /*중요!*/
+    margin-bottom: 50px;
+  }
+
+  #sign-form {
+    /* 500px이하로 작아질 때부터 사이즈에 맞게 알아서 조절되도록! */
+    width: auto;
+    max-width: 500px; 
+    margin: 0 auto; /*가운데 정렬*/
+  }
+
+
+  /* Feature 설정 */
+  /* section-feature 설정 부분 */
+  .section--feature .tiles li {
+    width: 50%;
+  }
+  /* 4개이미지 크기 축소 설정 */
+  .section--feature .tiles li img {
+    padding: 14px 30% 24px;
+  }
+  .section--feature .summary {
+    padding: 66px 20px 0 20px;
+  }
+  .section--feature .tiles li:nth-child(2) {
+    border-right: 0;
+  }
+
+
+
+  /* WHERE 부분 */
+  .section--where-is .inner {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+
+
+  /* Pricing card 부분 설정 ===> 푸터부분 바로위 내용*/
+  .section--pricing .inner {
+    max-width: none;
+    padding: 80px 20px;
+  }
+  /* 내부 텍스트 내용 설정 */
+  .section--pricing .card .cell2 {
+    font-size: 20px;
+  }
+
+
+
+  /* Footer 부분 설정 */
+  footer .inner {
+    padding: 50px 20px;
+  }
+
+  /* 푸터부분 이미지 안보이게 설정 */
+  footer .logo {
+    display: none;
+  }
+}
+
+
+
+/* Mobile 사이즈 버전 */
+@media screen and (max-width: 768px) {
+  .summary__title {
+    font-size: 34px !important;
+    /* border: 1px solid #ddd; */
+  }
+  .summary_description {
+    font-size: 22px;
+  }
+
+
+  /* feature 영역 설정 */
+  .section--feature .tiles li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /* Where is 부분 설정 */
+  #map {
+    /* 이부분 설정 중요함!!! */
+    width: auto;
+    margin: 40px -20px 0px -20px;
+    border-left: none;
+    border-right: none;
+  }
+  
+
+  /* Card 부분 설정 - Pricing */
+  .section--pricing .card {
+    display: block; /*flex에서 block으로 설정!!*/
+  }
+  .section--pricing .card .cell2 {
+    border-left: none; /*초기화*/
+    border-top: 1px solid #e5e5e5;
+  }
+
+
+  /* footer 부분 설정 ====> 이중설정 부분 중요!!! */
+  footer .site-links {
+    float: none;
+    text-align: center;
+    display: block;
+    /* 위의 3가지 설정후 밑에 display:inline으로 설정!!! */
+
+    /* display-flex로 설정되어있는 부분은 가운데 정렬시 밑에속성 사용 */
+    /* justify-content: center; */
+  }
+
+  /* 위아래 부분 사이 간격 */
+  footer .site-links:first-child {
+    margin-bottom: 20px;
+  }
+  footer .site-links li {
+    display: inline;
+  }
+}

@@ -1,0 +1,569 @@
+/* 반응형 - 모바일 사이즈 일 때 적용!!! */
+
+/* 💭💭💭💭💭💭💭💭 */
+@media (max-width: 768px) {
+    /* 전체 레이아웃 조정 */
+.cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+  }
+  
+  /* 편하게는 원래 .content로만 클래스 설정!! */
+  .cd-section .content {
+    /* position: absolute;---- 이부분 중요!! static으로 변경해주기!! */
+    position: static;
+
+
+    width: 100%;
+    height: 100%;
+  }
+  
+
+
+  /* 헤더 부분 설정 */
+  header {
+    z-index: 100;
+    transition: 0.5s;
+  }
+  header.active {
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+  }
+  header .gnb_inner .gnb .menu {
+      display: block;
+
+      /* background-color: beige; */
+
+      /* 따로 조정 - 처음에 띄워져있는 이유는 부모요소 부분에 이미
+      line-height값이 설정되어있으므로 상속되어서 그런것이므로 따른 값으로 수정 */
+      line-height: 40px;
+
+      /* 햄버거 버튼 자리를 주기위해 이값 적용 */
+      margin-top: 60px;
+  }
+  header .gnb_inner .gnb .menu a {
+      /* 각각의 메뉴 한줄씩 */
+      display: block;
+      color: #000;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: right;
+      padding-left: 20px;
+
+      margin-right: 20px;
+  }
+  header .gnb_inner .gnb .menu a:hover {
+    
+  }
+
+  header .gnb_inner .slogan {
+      display: none;
+  }
+  header .gnb_inner .gnb {
+      /* background-color: #fff; */    
+      background-color: honeydew;
+
+
+      /* 위치 부분 설정 */
+      position: fixed;
+      top: 0;
+
+      /* 다시 조정- -270px 값으로 -- 보이게 하지 않기위해서 일부러 조정! */
+      right: -270px;
+
+      /* ui는 가득채우는게아니고 어느정도만 채워서 나타내야하므로! */
+      width: 250px;
+      
+      
+
+      /* 뷰포트이상 넘어갈일이 없으므로 100vh로 설정함! */
+      height: 100vh;
+      /* 그림자 효과 설정 */
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.6);
+
+      transition: 0.8s;
+  }
+
+  /* gnb 부분 html태그에도 active 클래스 추가 */
+  header .gnb_inner .gnb.active {
+    right: 0;
+  }
+
+
+  /* 트리거 부분 설정 */
+  header .gnb_inner .trigger {
+      display: block;
+      
+      /* 임시보더 */
+      /* border: 1px solid red; */
+      width: 24px;
+      height: 14px;
+      position: absolute;
+      right: 20px;
+      /* top: 20px; - 원래 처음 설정 */
+      top: 25px;
+  }
+  
+  /* 이부분 설정 중요!! */
+  header .gnb_inner .trigger span {
+    position: absolute;
+    /* height: 1px; */
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+
+    /* x모양으로 바뀌는 transition 설정 */
+    transition: 0.8s;
+  }
+
+  /* bar - (1)번 */
+  header .gnb_inner .trigger span:nth-child(1){
+    top: 0;
+  }
+
+  /* bar - (2)번 */
+  header .gnb_inner .trigger span:nth-child(2){
+    top: 50%;
+    width: 80%;
+  }
+
+  /* bar - (3)번 */
+  header .gnb_inner .trigger span:nth-child(3){
+    top: 100%;
+  }
+
+
+  /* 버튼 클릭시 x 모양으로 바뀌는 active 설정 ===> 1번3번의 top값을 50%로 가운데로설정해주어야 함!!!*/
+  header .gnb_inner .trigger.active span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  /* bar - (2)번 */
+  header .gnb_inner .trigger.active span:nth-child(2){
+    top: 50%;
+    width: 80%;
+
+    opacity: 0;
+  }
+
+  /* bar - (3)번 */
+  header .gnb_inner .trigger.active span:nth-child(3){
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+
+  /*// 트리거 부분 설정 끝!!!*/
+
+
+
+  /* gototp 부분 설정 */
+  .gototop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    border: 1px solid #fff;
+
+    /* a태그는 inline요소이므로 width/height값을 가지려면 block으로 바꿔주어야함 */
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+
+    /* 기본적인 평상시 상태일 때 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+    /* background: violet; */
+    background: #000;
+  }
+
+  /* gototop버튼 active 되었을 때 */
+  .gototop.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* hiring 부분 설정 */
+  .btn_hiring {
+    left: 20px;
+    bottom: 20px;  
+  }
+
+
+  /* 반응형 설정 각 Section부분 */
+  /* #home,
+  #about,
+  #project,
+  #plan,
+  #awards,
+  #location,
+  #contact 
+  {
+    display: none;
+  } */
+
+  /* next / prev 설정 부분!! */
+  cd-vertical-nav {
+    display: none;
+  }
+
+
+  /* 01 - Home section 부분 */
+  .home-inner {
+    /* home section에서 "home-inner" 부분은 height:auto로 지정할 필요가 없음!! */
+    height: 100vh;
+  }
+  .welcome-text {
+    /* 한줄에 같이작성!!! */
+    transform: translate(-50%, -50%) scale(0.7);  
+  
+    /* pc버전에서 position:absolute로 설정되어있으므로 조절을 위해 width:100% 지정! */
+    width: 100%;
+    /* border: 1px solid #000; */
+  }
+  .home-heading {
+    left: 20px;
+  }
+  .home-heading span {
+    font-size: 50px;
+  }
+
+
+  /* 02 - About Section 부분 설정!! */
+  .about-inner {
+    height: auto;
+    padding: 20px;
+
+    /* 배경이미지랑 텍스트랑 겹쳐보이므로 이렇게설정 색깔만 변경해주기!!
+    background: none이 아님!! */
+    /* background: #0dace3; */
+  }
+  .about-inner .about-items {
+    position: static;
+    margin-left: 0;
+    transform: none;
+    width: 100%;
+
+    text-align: center;
+  }
+  .about-inner .about-items .item img {
+    float: none;
+    /* 새로 추가 */
+    margin: auto;
+  }
+
+
+  /* 03 - Project Section 부분 설정!! */
+  .project-inner {
+    /* height: 100vh; */
+    height: auto;
+    border: none;
+  }
+
+  /* 이부분이 project-info와 project-photo부분임!! */
+  .tab > div {
+    float: none;
+    width: 100%;
+  }
+  .project-info .view-project  {
+    width: 100%;
+  }
+  .project-info {
+    padding: 20px;
+  }
+
+  /* 모바일 사이즈 일때 before에 설정한 01 02 03 텍스트 부분이 올라와있어서
+  텍스트가 안보이게 되므로 이부분에 relative를 설정!!! */
+  .project-info p {
+    position: relative;
+  }
+  .project-info .detail div {
+    font-size: 13px;
+  }
+
+
+  .btn {
+    /* border: 1px solid red; */
+    width: 100%;
+    bottom: 0px;
+  }
+
+
+
+
+  /* 04 - Plan Section 부분 설정!! */
+  .plan-inner {
+    height: auto;
+    padding: 20px;
+  }
+
+  .plan-inner .plan-feature {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .plan-inner .plan-feature > div {
+    height: auto;
+    text-align: center;
+  }
+
+  .plan-info {
+    margin-bottom: 40px;
+  }  
+  .plan-info > div {
+    float: none;
+
+    /* style.css에서 width값이 하나는 70% 하나는 30%으로 설정되어 있으므로 */
+    width: 100%;
+  }
+
+  /* 이부분 설정 매우 중요!! - 모바일 사이즈 일때 
+  width값 100%와 height auto로 설정!!! */
+  .plan-photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .plan-heading {
+    padding-right: 0;
+  }
+
+
+
+  /* 05 - Awards Section 부분 설정!!!  */
+  .awards-inner {
+    /* height: 100vh; */
+    height: auto;
+    border: none;
+  }
+  .awards-inner > div  {
+    float: none;
+    width: 100%;
+    
+  }
+
+  /* victory-jump ===> awards-right!! */
+  .about-heading,
+  .awards-right img {
+    position: static;
+    transform: none;
+
+    /* 전체적인 padding값 설정은 이부분에서!! */
+    padding: 40px 20px;
+  }
+
+  .about-heading {
+    width: 100%;
+  }
+
+  /* 점프 이미지 전체 태그에 설정!! - 이미지 중앙정렬을 위해! */
+  .awards-right {
+    text-align: center;
+  }
+
+
+
+
+  /* 06 Location - Section 부분 설정!!! */
+  .location-inner {
+    height: auto;
+  }
+
+  /* 이부분 설정 중요!!!!! */
+  .feature {
+    /* position: static; */
+    /* 이때는 overlay 부분때문에 position을 relative로 설정!! -- 글씨 보이게!
+    그런데 이때 relative로 설정하게 되면 style.css에 적혀있던 top,left의 50%값이
+     적용이 되므로 이부분에서 0으로 설정해서 없애주어야함!!!*/
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+
+    /* 맨위부분 겹치지 않게!! */
+    /* padding: 30px; */
+  }
+  .feature > div {
+    float: none;
+    width: 100%;
+
+    padding: 20px;
+  }
+
+
+
+  /* 07 Contact - Section 부분 설정!!! */
+  .contact-inne {
+    height: auto;
+    /* height: 100vh; */
+  }
+
+  .contact-feature {
+    width: 100%;
+    transform: none;
+    position: static;
+  }
+  .contact-feature > div {
+    float: none;
+    width: 100%;
+  }
+
+
+
+  /* Hiring 페이지 설정 부분!!! */
+  .modal  {
+    /* padding: 20px; */
+  }
+
+  .hiring-main {
+    height: 300px;
+  }
+  .hiring-heading {
+    width: 100%;
+    top: 65%;
+  }
+  .hiring-heading h1 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .hiring-info > div {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .center-child {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .center-child h2 {
+    font-size: 30px;
+  }
+  .hiring-info {
+    padding: 20px;
+  }
+
+  .hiring-slogan {
+    padding: 50px 0px;
+  }
+  .hiring-slogan p {
+    font-size: 26px;
+  }
+  .hiring-slogan p::before {
+    top: -120px;
+  }
+
+  /* style.css에서는 display가 inline-block으로 설정되어 있었으므로! */
+  .hiring-contact ul {
+    display: block;
+    width: 100%;
+  }
+  /* X = Close 버튼 부분 설정 */
+  .featherlight .featherlight-close-icon {
+    font-size: 24px;
+    right: 30px;
+    /* right: 20px */
+    top: 35px;
+  }
+
+
+  .about-inner .about-items .item p {
+    text-align: left;
+    font-size: 16px;
+  }
+
+
+
+  /* Project - detail 01 02 03 페이지 설정 부분!!! */
+  .hiring-main.project-main01,
+  .hiring-main.project-main02,
+  .hiring-main.project-main03 {
+    height: 70vh;
+  }
+  .hiring-main.project-main01 .hiring-heading h1,
+  .hiring-main.project-main02 .hiring-heading h1,
+  .hiring-main.project-main03 .hiring-heading h1 {
+    font-size: 40px;
+}
+  .photo.project-info {
+    font-size: 19px;
+    padding-top: 20px;
+  }
+  .project-detail .hiring-slogan p:before {
+    left: -10px !important;
+    top: -120px
+  }
+
+
+  /* 수정 및 추가 */
+  .office p {
+    font-size: 16px;
+  }
+  .service .service-item p {
+    font-size: 16px;
+  }
+  .service .service-item h3 {
+    font-size: 20px;
+  }
+  .about-inner {
+    background-color: black;
+    background-image: none;
+  }
+  .about-inner .about-items .item p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-heading span {
+    margin-bottom: 30px;
+  }
+
+  .about-inner .about-items .item p {
+    text-align: center;
+  }
+  .about-inner {
+    background-color: black;
+    background-image: none;
+  }
+  
+}
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */
+
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */
+
+
+
+
+/* 💭💭💭💭💭💭💭💭 */

@@ -1,0 +1,637 @@
+@charset "utf-8";
+
+/* 폰트 설정 */
+@font-face {
+  font-family: 'KOTRA_BOLD-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+    --light-blue: rgb(130, 205, 206);
+    --dark-grey: rgb(79, 79, 79);
+}
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+body {
+    /* background-image: url(https://3.bp.blogspot.com/-A_Bm8kS99Zo/WEGMdlzKs9I/AAAAAAAABIM/2fOgqcRNodw-fXFnzSgQ8f2FGU_y_hSHQCLcB/s1600/Arco%2BRua%2BAugusta.jpg); */
+    /* background-image: url("../img/jeju/bg0001.jpg"); */
+    background-image: url("../img/jeju/bg_jeju.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: 0 25px;
+
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden; 
+    overflow-y:auto;
+
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+}
+a {
+    color: var(--light-blue);
+}
+
+
+#header--img {
+    height: 30px;
+    margin-top: 6px;
+}
+
+#header {
+  display: flex;
+  z-index: 3;
+
+  /* 스크롤해도 고정되도록!! */
+  position: fixed;
+    
+  top: 0;
+  background-color: white;
+  width: 100vw;
+
+  /* navbar 부분이 스크린보다 크지 않게 하기 위해서 */
+  max-width: 100%;
+  /* 그림자 효과 */
+  box-shadow: 0px 0px 5px rgba(82, 82, 82, 0.338);
+}
+header {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section--title {
+  color: rgb(70, 187, 200);
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background-color: white;
+
+  transform: translate(0px, 12px);
+
+  padding: 0 0.5rem;
+  display: inline-block;
+  text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.1);
+
+  /* background: orchid; */
+
+
+  /* 12월-09일 오후 추가 작성 부분!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  margin-bottom: 20px;
+}
+
+
+/* article, form{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2.5rem;
+  }
+   */
+
+/* about/territories/destinations/newsletter 설정 부분 */
+#nav--bar a{
+  display: block;
+  color: var(--dark-grey);
+  text-decoration: none;
+  cursor: pointer;
+
+  padding: 12px;
+}
+#nav--bar a:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--dark-grey);
+
+    
+  transition: all 1s ease-in-out;
+}
+/* 마우스 후버 후 다른곳으로 커서 가져갈때 나갈때 발생하는 애니메이션 속도 설정!!! */
+#nav--bar a.nav--link {
+  transition: all 0.7s;
+}
+
+
+
+#nav--bar {
+  font-size: 0.8rem;
+  margin-left: auto;
+  font-weight: bold;
+  text-shadow: 
+  0px 0px 1px #0e0d0d, 
+  2px 2px 5px #080808, 
+  -1px -1px 5px hsl(0, 43%, 99%);
+  /* background: olivedrab; */
+}
+
+/* about ~ 총4개 메뉴 부분들 */
+#ul--navbar {
+  display: flex;
+  margin: 0px;
+  list-style: none;
+  overflow: auto;
+
+  padding-left: 0;
+}
+
+
+
+/* #main-doc 설정 부분 */
+#main--doc {
+  /* background: cornflowerblue; */
+  max-width: 850px;
+
+  /* 가운데 정렬을 위해 작성 */
+  margin: auto;
+
+  padding: calc((100vw / 1.5)) 15px 15px 15px;
+}
+.main--section {
+  padding-top: 40px;
+}
+
+#about-pt {
+  text-indent: 2em;
+  line-height: 150%;
+}
+
+.box--shadow {
+  margin-top: 1.5rem;
+  position: relative;
+  box-shadow:
+  0 1px 4px rgba(0, 0, 0, 0.3), 
+  0 0 20px rgba(0, 0, 0, 0.1) inset;
+  /* background-color: var(--light-blue); */
+  background-color: cornflowerblue;
+  border-radius:5px;
+  padding: 10px;
+  margin-top: 25px;
+}
+#pt--summary {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+
+  padding: 8px;
+  border:2px dashed #F7EEEE;
+  border-radius:5px;
+}
+
+/* 가상 컨텐츠 작성 + 그림자 효과 및 보더 값 특이하게!! */
+.box--shadow:before, 
+.box--shadow:after{
+  position:absolute;
+  content:"";
+  top:14px;
+  bottom:14px;
+  left:0;
+  right:0;
+  box-shadow:0 0 25px 3px rgb(160, 160, 160);
+  border-radius:100px/10px;
+    
+  z-index:-1;
+}
+
+#ul--summary {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* Remove bullet and indentation disappear */
+  list-style: none;
+  align-items: center;
+  padding-left: 0;
+}
+#ul--summary .li--summary {
+  display: flex;
+  align-items: center;
+}
+#ul--summary .li--summary .bullet--image {
+  height: 50px;
+  width: 50px;
+  background-size: auto 100%;
+  margin-left: 20px;
+}
+
+#ul--summary .li--summary .bullet--text {
+  padding: 10px;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+}
+#history {
+  background-image: url("../img/jeju02/biography.svg");
+  transition: 0.3s;
+}
+#beaches{
+  background-image: url("../img/jeju02/beach01.svg");
+  transition: 0.3s;
+}
+#food {
+  background-image: url("../img/jeju02/healthy-eating.svg");
+  transition: 0.3s;
+}
+
+#history:hover,
+#beaches:hover,
+#food:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+
+
+#trailer {
+  margin: auto;
+}
+/* #video {
+    width: 520.8px;
+    height: 292.95px;
+} */
+
+#video {
+  width: 520.8px; 
+  height: 292.95px;
+}
+
+.main--section .terr--all {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.main--section .terr--all .terr--each {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+}
+
+/* 동그라미 모양 생성부분 */
+.main--section .terr--all .terr--each .terr--image {
+  height: 105px;
+  width: 105px;
+  background-size: auto 100%;
+  border-radius: 50%;
+  border: 2px solid var(--dark-grey);
+  box-shadow: 2px 2px 5px rgba(0,0,0, 0.3);
+}
+.main--section .terr--all .terr--each .terr--description {
+  line-height: 150%;
+  padding-bottom: 15px;
+}
+
+
+/* 보더값 원모양으로 만들어준 이미지  */
+#pt--continental{
+  background: url("../img/island01.jpg")no-repeat center center;
+  background-position-x: 0px;
+  transition: all 0.8s;
+  background-size: auto 100%;
+}
+#pt--madeira{
+  background: url("../img/island02.jpg")no-repeat center center;
+  background-position: center;
+  background-position-x: 0px;
+  background-size: auto 100%;
+  transition: all 0.8s;
+}
+#pt--azores{
+  background: url("../img/island03.jpeg")no-repeat center center;
+  background-position-x: 0px;
+  background-size: auto 100%;
+  transition: all 0.8s;  
+} 
+
+
+
+
+/* 보더값 원모양으로 만들어준 이미지 - 마우스 후버 시 효과 */
+#pt--continental:hover{
+  background: url("../img/jeju02/machar01.jpg")no-repeat center center;
+  background-position-x: -20px;
+  background-size: auto 100%;
+  transition: all 0.8s;
+}
+
+#pt--madeira:hover{
+  background: url("../img/jeju02/machar02.jpg")no-repeat center center;
+  background-position-x: -20px;
+  background-size: auto 100%;
+  transition: all 0.8s;
+}
+
+#pt--azores:hover{
+  background: url("../img/jeju02/machar04.jpeg")no-repeat center center;
+  background-position-x: -20px;
+  background-size: auto 100%;
+  transition: all 0.8s;
+} 
+
+
+
+
+
+
+
+  /* visit 버튼 부분 설정 */
+#visit {
+  /* background-color: var(--light-blue); */
+  background-color: cornflowerblue;
+  width: 105px;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 16px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  /* margin-top: 0.5rem; */
+  bottom: 0;
+  margin-top: auto;
+  outline: none;
+  transition: 0.3s;
+}
+#visit:hover {
+  /* background-color: rgb(45, 187, 195); */
+  background-color: rgb(31, 31, 31);
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgb(186, 186, 186);
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+/* Jejudo 글씨 부분 */
+#title {
+  text-transform: uppercase;
+  color: var(--dark-grey);
+  text-align: center;
+
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3.5em;
+  letter-spacing: 0.1em;
+  display: block;
+
+  font-style: normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+/* #title 부분에 대한 가상컨텐츠 작성 부분 */
+#title::before,
+#title::after {
+  font-family: 'EB Garamond', serif;
+  content: "§";
+  display: inline-block;
+  font-size: 0.5em;
+  opacity: 0.4;
+
+  margin: 0 0.6em;
+
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* 비행기 버튼 부분 설정 */
+#submit:hover {
+  /* background-color: rgb(186, 232, 154); */
+  background-color: rgb(45, 187, 195);
+  box-shadow: 2px 2px 2px rgb(186, 186, 186);
+  cursor: pointer;    
+}
+
+
+/* 9개 이지미 설정 부분 */
+#jeju01 {
+  /* background-image: url(https://preview.ibb.co/b46D8z/belem_tower_2809818_960_720.jpg);
+  background-size: 115% auto ; */
+  background-image: url("../img/jeju/travel01-한라산.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#jeju02{
+  /* background-image: url(https://t-ec.bstatic.com/images/hotel/max1024x768/767/76761731.jpg); */
+  background-image: url("../img/jeju/travel02-03-천지연폭포.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#jeju03{
+  /* background-image: url(https://d1bvpoagx8hqbg.cloudfront.net/originals/28-reasons-portugal-4f575b3289c6356fb2c9c4b89c45f7ad.jpg); */
+  background-image: url("../img/jeju/travel03-새별오름.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#jeju04{
+  /* background-image: url(https://handluggageonly.co.uk/wp-content/uploads/2016/07/IMG_0052.jpg); */
+  background-image: url("../img/jeju/travel04-주상절리대.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#jeju05{
+  /* background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/if217f9a65f7b965d/version/1459183042/bom-jesus-braga.jpg);
+  background-size: auto 100% ; */
+  background-image: url("../img/jeju/travel05-섭지코지.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#jeju06{
+  /* background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/12/ac/63/88/sao-miguel-west-full.jpg); */
+  background-image: url("../img/jeju/travel06-용두암.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#jeju07{
+  /* background-image: url(https://img.ev.mu/images/villes/2261/1605x642/2261.jpg);
+  background-size: auto 100% ; */
+  background-image: url("../img/jeju/travel07-산방산.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#jeju08{
+  /* background-image: url(http://luispinaphotography.com/wp-content/uploads/2017/01/Azenhas-do-Mar-Feature-Photo-1024x683-2048x1340.jpg); */
+   /* background-image: url(https://image.ibb.co/dpzs8A/transferir.jpg); */
+  background-image: url("../img/jeju/travel10-외돌개.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#jeju09{
+  /* background-image: url(https://cdn.clickstay.com/images/blog/post/Walk%20way%20down%20to....jpg); */
+  background-image: url("../img/jeju/travel08-돌문화공원.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;  
+}   
+
+/* Destination - dest-all 설정 부분 */
+.dest--all {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 15px;
+}
+.dest--all .dest--each {
+  /* padding: 2px 2px; */
+  background-attachment: fixed;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+.dest--all .dest--each .dest--image {
+  height: 15vw;
+  max-height: 170px;
+
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+
+  transition: all 0.5s;
+}
+/* filter - 이미지 필터효과 지정 */
+.dest--all .dest--each .dest--image:hover {
+  filter: contrast(1.2) saturate(1.2) sepia(0.3);
+  transition: all 0.5s;
+}
+
+
+/* 이부분에 글자 생성되는 애니메이션 만들어서 추가해주기!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.dest--all .dest--each .dest--image .dest--title {
+  color: #fff;
+  font-size: 1.2rem;
+  /* font-family: 'KOTRA_BOLD-Bold'; */
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  /* vertical-align: center; */
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.2s linear, opacity 0.2s linear, transform 0.4s linear;
+  letter-spacing: 0.2em;
+  margin: auto;
+  text-shadow: 0 0 5px rgb(0, 0, 0), 2px 2px 5px rgb(0, 0, 0), -1px -1px 5px rgb(0, 0, 0);
+}
+
+.dest--all .dest--each .dest--image:hover .dest--title {
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 0s;
+  transform: translate(0px, -50px);
+}
+
+
+
+
+ /* Main-section의 Newletter 부분  */
+ #email-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  max-width: 500px;
+ }
+
+ /* email 입력란 */
+input[type=email] {
+  height: 23px;
+  width: 250px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  padding: 5px;
+  margin-top: 15px;
+}
+input:invalid {
+  border: 1px solid var(--light-blue);
+}
+
+
+
+
+/* Footer 설정 부분 */
+footer {
+  font-size: 0.8rem;
+  margin: 0 auto;
+  /* padding: 1rem 0.2rem; */
+  padding: 2rem 0.2rem;
+  color: #fff;
+  background-color: rgb(31, 31, 31);
+}
+
+
+
+
+
+
+
+
+
+
+/* JEJUDO 글자 효과 설정 부분 */
+#fittext3 {
+    text-align: center;
+    counter-reset: #fff;
+    text-transform: uppercase;
+    display: block;
+    text-shadow: #253e45 -1px 1px 0,
+    #253e45 -2px 2px 0,
+    #d45848 -3px 3px 0,
+    #d45848 -4px 4px 0;
+    margin: 5% auto 5%;
+    font-size: 5em;
+}
+
+#fittext3 span {
+    display: inline-block;
+    margin: 0 -0.075em;
+    animation: loading 1s infinite alternate;
+    color: var(--color-white);
+}
+#fittext3 span:nth-child(2) {
+    animation-delay: .1s;
+  }
+#fittext3 span:nth-child(3) {
+    animation-delay: .3s;
+  }
+#fittext3 span:nth-child(4) {
+    animation-delay: .5s;
+  }
+#fittext3 span:nth-child(5) {
+    animation-delay: .7s;
+  }
+  slow span:nth-child(6) {
+    animation-delay: .5s;
+  }
+  /* slow span:nth-child(7) {
+    animation-delay: .6s;
+  } */
+  @keyframes loading {
+    0% {
+      /* opacity: 1;*/
+      transform: scale(1);
+    }
+    100% {
+      /* opacity: 0; */
+      transform: scale(0.8);
+    }
+  }
